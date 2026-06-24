@@ -94,7 +94,7 @@ def main():
     pdf.add_page()
 
     pdf.h1("CTA Trace: why-good-calls-dont-close#download")
-    pdf.body("Page: https://salesbreakdowninstitute.com/why-good-calls-dont-close#download")
+    pdf.body("Page: https://businessimpactcanada.com/why-good-calls-dont-close#download")
     pdf.body("Generated: June 10, 2026")
 
     pdf.h2("Page profile")

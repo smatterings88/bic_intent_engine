@@ -3,7 +3,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Sales Breakdown Institute — Independent Sales Performance Research" },
+      { title: "Business Impact Canada — Independent Sales Performance Research" },
       {
         name: "description",
         content:
@@ -65,7 +65,7 @@ function Index() {
             Studying where sales conversations break down—and why deals are lost.
           </h1>
           <p className="mt-7 max-w-2xl text-lg text-muted-foreground leading-relaxed">
-            The Sales Breakdown Institute is a non-commercial research initiative examining the
+            The Business Impact Canada is a non-commercial research initiative examining the
             structural, behavioral, and linguistic patterns that cause sales conversations to fail.
             Our work supports a clearer, evidence-based understanding of revenue loss.
           </p>

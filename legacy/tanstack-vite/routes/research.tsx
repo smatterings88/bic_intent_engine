@@ -4,7 +4,7 @@ import { PageHeader } from "@/components/SiteLayout";
 export const Route = createFileRoute("/research")({
   head: () => ({
     meta: [
-      { title: "Research — Sales Breakdown Institute" },
+      { title: "Research — Business Impact Canada" },
       {
         name: "description",
         content: "Working papers, field studies, and briefs on sales conversation breakdowns.",

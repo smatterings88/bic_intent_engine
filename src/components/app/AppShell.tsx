@@ -55,7 +55,7 @@ export function AppShell({ children }: { children: ReactNode }) {
             href="/app/dashboard"
             className="font-serif text-sm font-medium text-foreground transition-opacity duration-200 hover:opacity-90"
           >
-            Institute App
+            Business Impact Canada
           </Link>
           <nav className="flex flex-wrap items-center justify-end gap-x-1 gap-y-2 text-sm sm:gap-x-4">
             <Link

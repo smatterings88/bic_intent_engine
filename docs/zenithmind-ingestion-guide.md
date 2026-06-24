@@ -1,8 +1,8 @@
-# ZenithMind → Sales Breakdown Institute — Integration Guide
+# ZenithMind → Business Impact Canada — Integration Guide
 
-This document is the **authoritative integration spec** for ZenithMind (or any automated content producer) submitting pages to **salesbreakdowninstitute.com**.
+This document is the **authoritative integration spec** for ZenithMind (or any automated content producer) submitting pages to **businessimpactcanada.com**.
 
-**Production base URL:** `https://salesbreakdowninstitute.com`  
+**Production base URL:** `https://businessimpactcanada.com`  
 **Content spec:** Zenith Content **v1.2** (component JSON — **no raw HTML or CSS** from ZenithMind)
 
 ---
@@ -114,7 +114,7 @@ Creates or **fully replaces** the draft at `zenithPages/{slug}`.
 **Request**
 
 ```http
-POST https://salesbreakdowninstitute.com/api/zenith/content
+POST https://businessimpactcanada.com/api/zenith/content
 Authorization: Bearer <SECRET>
 Content-Type: application/json
 
@@ -160,7 +160,7 @@ Content-Type: application/json
 Same secret (or Firebase admin token). Returns stored page JSON.
 
 ```http
-GET https://salesbreakdowninstitute.com/api/zenith/content?slug=why-good-calls-dont-close
+GET https://businessimpactcanada.com/api/zenith/content?slug=why-good-calls-dont-close
 Authorization: Bearer <SECRET>
 ```
 
@@ -299,7 +299,7 @@ There are **three related concepts** — do not confuse them:
 | Concept | What it is | How ZenithMind sets it |
 | --- | --- | --- |
 | **Lead magnet record** | Metadata in `leadMagnets` (legacy API) or implied by guide page slug | `POST /api/zenith/lead-magnets` with `id`, `fileUrl`, `ghlTag`, etc. |
-| **PDF file** | Static asset visitors download | Host at `https://salesbreakdowninstitute.com/assets/{filename}.pdf` (repo `public/assets/`) |
+| **PDF file** | Static asset visitors download | Host at `https://businessimpactcanada.com/assets/{filename}.pdf` (repo `public/assets/`) |
 | **Form + GHL wiring** | Which funnel runs when someone opts in | **`lead-form.destination`** = `lead-magnet:{id}` (v1.2) |
 
 #### v1.2 Zenith pages (preferred)
@@ -415,7 +415,7 @@ Build pages that satisfy **both** tables below to avoid publish failures.
 
 **Default OG template:** `lead-magnet`
 
-**Lead magnet PDF assets:** Host files under `https://salesbreakdowninstitute.com/assets/{filename}.pdf` (e.g. `/assets/the-call-felt-fine.pdf`). Reference that URL in copy or post-submit messaging — not via a special API field.
+**Lead magnet PDF assets:** Host files under `https://businessimpactcanada.com/assets/{filename}.pdf` (e.g. `/assets/the-call-felt-fine.pdf`). Reference that URL in copy or post-submit messaging — not via a special API field.
 
 ---
 
@@ -710,7 +710,7 @@ Single-column hero with recording-tool badges and SBI badge.
     { "name": "Fireflies", "detail": "meeting notes" }
   ],
   "sbiBadge": "SBI — forensic interpretation",
-  "proofLine": "Patterns observed across recorded B2B sales conversations · Sales Breakdown Institute is a nonprofit research organization · DC File No. N00007501784",
+  "proofLine": "Patterns observed across recorded B2B sales conversations · Business Impact Canada is a nonprofit research organization · DC File No. N00007501784",
   "primaryCta": { "label": "Download The Analysis Guide →", "destination": "lead-magnet:the-call-felt-fine" }
 }
 ```
@@ -844,7 +844,7 @@ Recording layer vs SBI interpretation layer (LP2).
     "interpretationLayer": {
       "icon": "🔬",
       "label": "The Interpretation Layer",
-      "tools": "Sales Breakdown Institute · Sherpa",
+      "tools": "Business Impact Canada · Sherpa",
       "outputs": "drift · hesitation trail · withdrawal · divergence"
     },
     "caption": "The recording tool is the camera. SBI is the analyst reading what it captured."
@@ -863,7 +863,7 @@ How call review works — nameplate + ops grid (thank-you pages).
   "type": "body-section",
   "variant": "sherpa-bridge",
   "label": "HOW CALL REVIEW WORKS",
-  "body": "The Sales Breakdown Institute publishes research and educational analysis on conversational drift patterns. For direct review of your own recorded calls, submissions are analyzed through:",
+  "body": "The Business Impact Canada publishes research and educational analysis on conversational drift patterns. For direct review of your own recorded calls, submissions are analyzed through:",
   "nameplate": {
     "name": "Alex The Sherpa",
     "descriptor": "Conversational diagnostics for recorded sales calls",
@@ -1001,7 +1001,7 @@ Full stylesheet: `src/components/zenith/zenith-variants.css` (imported in `src/a
 ```json
 {
   "seo": {
-    "metaTitle": "Why Good Calls Don't Close | Sales Breakdown Institute",
+    "metaTitle": "Why Good Calls Don't Close | Business Impact Canada",
     "metaDescription": "Short summary for SERP and social.",
     "canonicalPath": "/guides/why-good-calls-dont-close",
     "noindex": false,
@@ -1037,7 +1037,7 @@ Full stylesheet: `src/components/zenith/zenith-variants.css` (imported in `src/a
 
 **Publish:** If `template` and `cdnUrl` are both missing, the server defaults `template` from `contentType` on publish.
 
-**Rendered OG URL:** `https://salesbreakdowninstitute.com/api/og/{slug}` (1200×630).
+**Rendered OG URL:** `https://businessimpactcanada.com/api/og/{slug}` (1200×630).
 
 ---
 
@@ -1068,7 +1068,7 @@ When a `lead-form` on the page uses the same `destination`, hero CTAs scroll to 
 
 ### 10.0 CRM connection (Private Integration)
 
-Sales Breakdown Institute talks to GoHighLevel through a **Private Integration** token stored as **`GHL_PIT_TOKEN`** (never sent to ZenithMind or the browser). The app calls LeadConnector v2 (`services.leadconnectorhq.com`) with that token and **`GHL_LOCATION_ID`**.
+Business Impact Canada talks to GoHighLevel through a **Private Integration** token stored as **`GHL_PIT_TOKEN`** (never sent to ZenithMind or the browser). The app calls LeadConnector v2 (`services.leadconnectorhq.com`) with that token and **`GHL_LOCATION_ID`**.
 
 ZenithMind only configures **tags and destinations in page JSON**; the site resolves tags and upserts contacts on submit. Do not embed API keys or PIT tokens in Zenith payloads.
 
@@ -1229,7 +1229,7 @@ Content-Type: application/json
 ### 14.1 Lead magnet guide (minimal publish-ready)
 
 ```bash
-curl -sS -X POST "https://salesbreakdowninstitute.com/api/zenith/content" \
+curl -sS -X POST "https://businessimpactcanada.com/api/zenith/content" \
   -H "Authorization: Bearer $ZENITH_CONTENT_SECRET" \
   -H "Content-Type: application/json" \
   -d @lead-magnet-page-v12.json

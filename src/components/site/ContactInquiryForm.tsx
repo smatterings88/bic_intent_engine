@@ -29,7 +29,7 @@ export function ContactInquiryForm() {
         <div className="eyebrow">Received</div>
         <h2 className="mt-3 font-serif text-2xl text-foreground">Thank you for your message.</h2>
         <p className="mt-3 text-muted-foreground">
-          A member of the Institute will follow up by email if a response is required.
+          A member of our team will follow up by email if a response is required.
         </p>
       </div>
     );

@@ -18,7 +18,7 @@ export const exampleArticle: Article = {
     searchIntent: "informational",
   },
   seo: {
-    metaTitle: "Why Prospects Ghost After Sales Calls | Sales Breakdown Institute",
+    metaTitle: "Why Prospects Ghost After Sales Calls | Business Impact Canada",
     metaDescription:
       "Research-backed look at where momentum dies after sales calls—and how teams misread silence as interest instead of risk.",
     canonicalPath: "/articles/why-prospects-ghost-after-sales-calls",
@@ -83,7 +83,7 @@ export const exampleLandingPage: LandingPage = {
     searchIntent: "commercial",
   },
   seo: {
-    metaTitle: "Sales Call Analysis — Sherpa-Style Review | Sales Breakdown Institute",
+    metaTitle: "Sales Call Analysis — Sherpa-Style Review | Business Impact Canada",
     metaDescription:
       "Turn a single recorded call into a structured review: failure moments, corrected moves, and a clear next step—without fluff.",
     canonicalPath: "/sales-call-analysis",

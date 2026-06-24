@@ -13,7 +13,7 @@ const DEFAULT_DRIFT_PERCENT = 54;
 const DEFAULT_DRIFT_LABEL = "DRIFT DETECTED";
 const DEFAULT_STATUS = "Forensic Complete";
 const DEFAULT_VERDICT_LABEL = "Sherpa Verdict";
-const DEFAULT_FOOTER = "Free Forensic Analysis · SalesBreakdownInstitute.com";
+const DEFAULT_FOOTER = "Free Forensic Analysis · BusinessImpactCanada.com";
 
 export function ForensicHeroArtifact({ artifact }: { artifact: ForensicArtifact }) {
   const bars = resolveWaveformBars(artifact.waveform);

@@ -3,8 +3,8 @@ import { PageHeader } from "@/components/site/PageHeader";
 import { buildPageMetadata } from "@/lib/build-metadata";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Terms of Use — Sales Breakdown Institute",
-  description: "Terms of use for the Sales Breakdown Institute website.",
+  title: "Terms of Use — Business Impact Canada",
+  description: "Terms of use for Business Impact Canada website.",
   path: "/terms",
 });
 
@@ -16,31 +16,31 @@ export default function TermsPage() {
         <section>
           <h2 className="font-serif text-xl text-foreground mb-3">Acceptance</h2>
           <p>
-            By accessing the Sales Breakdown Institute website, you agree to these terms. If you do
-            not agree, please discontinue use of the site.
+            By accessing the Business Impact Canada website, you agree to these terms. If you do not
+            agree, please discontinue use of the site.
           </p>
         </section>
         <section>
           <h2 className="font-serif text-xl text-foreground mb-3">Use of content</h2>
           <p>
-            Research, articles, and other materials published by the Institute are made available
-            for educational and informational purposes. Excerpts may be quoted with appropriate
-            attribution. Reproduction of full publications requires written permission.
+            Programs, articles, and other materials published by Business Impact Canada are made
+            available for educational and informational purposes. Excerpts may be quoted with
+            appropriate attribution. Reproduction of full publications requires written permission.
           </p>
         </section>
         <section>
           <h2 className="font-serif text-xl text-foreground mb-3">No professional advice</h2>
           <p>
-            Materials published by the Institute reflect ongoing research and should not be
-            construed as professional, financial, or legal advice. The Institute makes no warranty
-            regarding the application of its findings to any specific organization or context.
+            Materials on this site are for educational purposes and should not be construed as
+            professional, financial, or legal advice. Business Impact Canada makes no warranty
+            regarding the application of its content to any specific organization or context.
           </p>
         </section>
         <section>
           <h2 className="font-serif text-xl text-foreground mb-3">Limitation of liability</h2>
           <p>
-            The Institute is not liable for any direct or indirect loss arising from the use of
-            materials on this website.
+            Business Impact Canada is not liable for any direct or indirect loss arising from the
+            use of materials on this website.
           </p>
         </section>
         <section>

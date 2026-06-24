@@ -1,4 +1,4 @@
-/** Google Tag Manager container for salesbreakdowninstitute.com */
+/** Google Tag Manager container for businessimpactcanada.com */
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID?.trim() || "GTM-KQHFRMK8";
 
 const GTM_HEAD_SCRIPT = `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

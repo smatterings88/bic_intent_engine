@@ -18,11 +18,11 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   if (!isValidSlug(slug)) {
-    return { title: "CTA | Sales Breakdown Institute", robots: { index: false, follow: false } };
+    return { title: "CTA | Business Impact Canada", robots: { index: false, follow: false } };
   }
   const page = await getPublishedZenithPageBySlug(slug);
   if (!page || page.contentType !== "cta_page") {
-    return { title: "CTA | Sales Breakdown Institute", robots: { index: false, follow: false } };
+    return { title: "CTA | Business Impact Canada", robots: { index: false, follow: false } };
   }
   return buildZenithPageMetadata(page);
 }

@@ -4,7 +4,7 @@ import { PageHeader } from "@/components/SiteLayout";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — Sales Breakdown Institute" },
+      { title: "About — Business Impact Canada" },
       {
         name: "description",
         content:
@@ -21,7 +21,7 @@ function AboutPage() {
       <PageHeader
         eyebrow="About the Institute"
         title="An independent voice in sales performance research."
-        lede="The Sales Breakdown Institute exists to study—rigorously and without commercial bias—why sales conversations fail and what that failure costs."
+        lede="Business Impact Canada exists to study—rigorously and without commercial bias—why sales conversations fail and what that failure costs."
       />
       <article className="mx-auto max-w-3xl px-6 py-16 prose-research space-y-10">
         <section>

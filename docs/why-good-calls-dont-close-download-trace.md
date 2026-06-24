@@ -1,7 +1,7 @@
 # CTA Trace: why-good-calls-dont-close#download
 
-**Sales Breakdown Institute · Intent Page Engine**  
-**Page:** https://salesbreakdowninstitute.com/why-good-calls-dont-close#download  
+**Business Impact Canada · Intent Page Engine**  
+**Page:** https://businessimpactcanada.com/why-good-calls-dont-close#download  
 **Generated:** June 10, 2026
 
 ---
@@ -247,4 +247,4 @@ Confirm:
 
 ---
 
-*Sales Breakdown Institute · Intent Page Engine*
+*Business Impact Canada · Intent Page Engine*

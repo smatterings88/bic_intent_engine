@@ -4,10 +4,10 @@ import { PageHeader } from "@/components/SiteLayout";
 export const Route = createFileRoute("/programs")({
   head: () => ({
     meta: [
-      { title: "Programs — Sales Breakdown Institute" },
+      { title: "Programs — Business Impact Canada" },
       {
         name: "description",
-        content: "Ongoing research programs at the Sales Breakdown Institute.",
+        content: "Ongoing research programs at Business Impact Canada.",
       },
     ],
   }),

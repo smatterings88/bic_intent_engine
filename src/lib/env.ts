@@ -101,7 +101,7 @@ export function getZenithContentSecret(): string {
 }
 
 const DEFAULT_GHL_API_BASE_URL = "https://services.leadconnectorhq.com";
-const DEFAULT_GHL_USER_AGENT = "SalesBreakdownInstitute/1.0";
+const DEFAULT_GHL_USER_AGENT = "BusinessImpactCanada/1.0";
 
 let ghlLegacyApiKeyWarned = false;
 

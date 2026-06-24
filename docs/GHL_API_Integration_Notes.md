@@ -30,7 +30,7 @@ All server routes (`/api/zenith/forms/submit`, `/api/landing-pages/opt-in`, admi
 | `GHL_PIT_TOKEN` | Yes | — |
 | `GHL_LOCATION_ID` | Yes | — |
 | `GHL_API_BASE_URL` | No | `https://services.leadconnectorhq.com` |
-| `GHL_USER_AGENT` | No | `SalesBreakdownInstitute/1.0` |
+| `GHL_USER_AGENT` | No | `BusinessImpactCanada/1.0` |
 
 `GHL_API_KEY` is **deprecated** (legacy v1 key). Do **not** use in production — set `GHL_PIT_TOKEN` on Vercel/local. A one-time console warning appears only if `GHL_PIT_TOKEN` is missing and `GHL_API_KEY` is set.
 

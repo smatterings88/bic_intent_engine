@@ -3,7 +3,7 @@ import { PageHeader } from "@/components/site/PageHeader";
 import { buildPageMetadata } from "@/lib/build-metadata";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Where Deals Break — Sales Breakdown Institute",
+  title: "Where Deals Break — Business Impact Canada",
   description:
     "A behavioral analysis of sales conversation failure. A research report synthesizing observed patterns and published findings on where deals break down.",
   path: "/where-deals-break",
@@ -319,9 +319,9 @@ export default function WhereDealsBreakPage() {
         <hr className="my-16 border-border" />
 
         <p className="text-sm text-muted-foreground italic">
-          This report is published by the Sales Breakdown Institute as part of its ongoing program
-          of research into the behavioral and structural determinants of sales outcomes. Findings
-          are intended for educational and analytical use.
+          This report is published by Business Impact Canada as part of its ongoing program of
+          research into the behavioral and structural determinants of sales outcomes. Findings are
+          intended for educational and analytical use.
         </p>
       </article>
     </>

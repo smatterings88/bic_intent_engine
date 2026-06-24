@@ -2,7 +2,7 @@
 
 ## Summary
 
-The public Sales Breakdown Institute site was migrated from **TanStack Start on Vite** (Cloudflare-oriented) to **Next.js 15 App Router** with **Tailwind CSS v4** (PostCSS). Default `npm run dev`, `npm run build`, and `npm run start` target Next.js only. **Phase 1.5** moved remaining TanStack/Vite/Wrangler sources to `legacy/tanstack-vite/` — see `docs/phase-1-5-legacy-cleanup.md`.
+The public Business Impact Canada site was migrated from **TanStack Start on Vite** (Cloudflare-oriented) to **Next.js 15 App Router** with **Tailwind CSS v4** (PostCSS). Default `npm run dev`, `npm run build`, and `npm run start` target Next.js only. **Phase 1.5** moved remaining TanStack/Vite/Wrangler sources to `legacy/tanstack-vite/` — see `docs/phase-1-5-legacy-cleanup.md`.
 
 **Fonts:** `next/font/google` loads **Inter** and **Source Serif 4** with CSS variables `--font-inter` and `--font-source-serif` wired into the existing `@theme` font stacks in `globals.css` (replacing the previous Google Fonts `<link>` tags).
 
@@ -154,4 +154,4 @@ As of **Phase 1.5**, former `src/routes/**`, `src/router.tsx`, `src/routeTree.ge
 - **Build command:** `npm run build`
 - **Start command:** `npm run start`
 - **Framework:** Next.js
-- Set **`NEXT_PUBLIC_SITE_URL`** in the Vercel project (e.g. `https://salesbreakdowninstitute.com`) for correct canonical and absolute OG URLs.
+- Set **`NEXT_PUBLIC_SITE_URL`** in the Vercel project (e.g. `https://businessimpactcanada.com`) for correct canonical and absolute OG URLs.

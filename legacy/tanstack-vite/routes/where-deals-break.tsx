@@ -4,7 +4,7 @@ import { PageHeader } from "@/components/SiteLayout";
 export const Route = createFileRoute("/where-deals-break")({
   head: () => ({
     meta: [
-      { title: "Where Deals Break — Sales Breakdown Institute" },
+      { title: "Where Deals Break — Business Impact Canada" },
       {
         name: "description",
         content:
@@ -329,7 +329,7 @@ function ReportPage() {
         <hr className="my-16 border-border" />
 
         <p className="text-sm text-muted-foreground italic">
-          This report is published by the Sales Breakdown Institute as part of its ongoing program
+          This report is published by Business Impact Canada as part of its ongoing program
           of research into the behavioral and structural determinants of sales outcomes. Findings
           are intended for educational and analytical use.
         </p>

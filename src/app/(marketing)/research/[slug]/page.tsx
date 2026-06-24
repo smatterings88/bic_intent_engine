@@ -20,14 +20,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   if (!isValidSlug(slug)) {
     return {
-      title: "Research | Sales Breakdown Institute",
+      title: "Research | Business Impact Canada",
       robots: { index: false, follow: false },
     };
   }
   const page = await getPublishedZenithPageBySlug(slug);
   if (!page || page.contentType !== "research_page") {
     return {
-      title: "Research | Sales Breakdown Institute",
+      title: "Research | Business Impact Canada",
       robots: { index: false, follow: false },
     };
   }

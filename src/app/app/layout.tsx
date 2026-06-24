@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { AppShell } from "@/components/app/AppShell";
 
 export const metadata: Metadata = {
-  title: "App — Sales Breakdown Institute",
-  description: "Authenticated workspace for the Sales Breakdown Institute.",
+  title: "App — Business Impact Canada",
+  description: "Authenticated workspace for Business Impact Canada.",
   robots: { index: false, follow: false },
 };
 

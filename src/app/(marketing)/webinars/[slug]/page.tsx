@@ -20,14 +20,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   if (!isValidSlug(slug)) {
     return {
-      title: "Webinar | Sales Breakdown Institute",
+      title: "Webinar | Business Impact Canada",
       robots: { index: false, follow: false },
     };
   }
   const page = await getPublishedZenithPageBySlug(slug);
   if (!page || page.contentType !== "webinar_page") {
     return {
-      title: "Webinar | Sales Breakdown Institute",
+      title: "Webinar | Business Impact Canada",
       robots: { index: false, follow: false },
     };
   }

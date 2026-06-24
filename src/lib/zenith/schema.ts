@@ -1,9 +1,10 @@
+import { siteConfig } from "@/lib/site";
 import { getOgImageUrlForPage } from "@/lib/zenith/og";
 import { buildAbsoluteUrl, getBaseUrl, getCanonicalPathForZenithPage } from "@/lib/zenith/routes";
 import type { ZenithComponent, ZenithPage } from "@/types/zenith-content";
 
-const ORG_NAME = "Sales Breakdown Institute";
-const ORG_URL = "https://salesbreakdowninstitute.com";
+const ORG_NAME = siteConfig.name;
+const ORG_URL = siteConfig.url;
 
 function orgSchema(): Record<string, unknown> {
   return {

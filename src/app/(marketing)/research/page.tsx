@@ -4,7 +4,7 @@ import { PageHeader } from "@/components/site/PageHeader";
 import { buildPageMetadata } from "@/lib/build-metadata";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Research — Sales Breakdown Institute",
+  title: "Research — Business Impact Canada",
   description: "Working papers, field studies, and briefs on sales conversation breakdowns.",
   path: "/research",
 });

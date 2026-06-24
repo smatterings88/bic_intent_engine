@@ -19,11 +19,11 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   if (!isValidSlug(slug)) {
-    return { title: "Guide | Sales Breakdown Institute", robots: { index: false, follow: false } };
+    return { title: "Guide | Business Impact Canada", robots: { index: false, follow: false } };
   }
   const page = await getPublishedZenithPageBySlug(slug);
   if (!page || page.contentType !== "lead_magnet_page") {
-    return { title: "Guide | Sales Breakdown Institute", robots: { index: false, follow: false } };
+    return { title: "Guide | Business Impact Canada", robots: { index: false, follow: false } };
   }
   return buildZenithPageMetadata(page);
 }

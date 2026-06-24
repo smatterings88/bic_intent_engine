@@ -78,7 +78,7 @@ Both live under **`(marketing)`** so they use **`SiteLayout`** like the rest of 
 
 ## JSON-LD Behavior
 
-- **Article / BlogPosting:** `@type` from **`article.schema.type`** when `BlogPosting`, else **`Article`**; headline, description, url, optional dates, **`mainEntityOfPage`**, **`publisher`** (Sales Breakdown Institute).
+- **Article / BlogPosting:** `@type` from **`article.schema.type`** when `BlogPosting`, else **`Article`**; headline, description, url, optional dates, **`mainEntityOfPage`**, **`publisher`** (Business Impact Canada).
 - **FAQPage:** only if **`article.aeo.faqs`** has items.
 - **BreadcrumbList:** Home → Articles index → current article title.
 

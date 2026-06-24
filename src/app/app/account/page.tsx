@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { AccountClient } from "@/components/app/AccountClient";
 
 export const metadata: Metadata = {
-  title: "Account — Sales Breakdown Institute",
+  title: "Account — Business Impact Canada",
   robots: { index: false, follow: false },
 };
 

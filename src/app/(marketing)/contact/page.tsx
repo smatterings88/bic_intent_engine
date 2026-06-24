@@ -2,20 +2,23 @@ import type { Metadata } from "next";
 import { ContactInquiryForm } from "@/components/site/ContactInquiryForm";
 import { PageHeader } from "@/components/site/PageHeader";
 import { buildPageMetadata } from "@/lib/build-metadata";
+import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Contact — Sales Breakdown Institute",
-  description: "Contact the Sales Breakdown Institute for research inquiries and correspondence.",
+  title: "Contact — Business Impact Canada",
+  description: "Contact Business Impact Canada for program questions and general correspondence.",
   path: "/contact",
 });
 
 export default function ContactPage() {
+  const { email, legalName, address } = siteConfig;
+
   return (
     <>
       <PageHeader
         eyebrow="Contact"
-        title="Correspondence and research inquiries."
-        lede="The Institute welcomes inquiries from researchers, educators, and practitioners. Please allow several business days for a reply."
+        title="Get in touch."
+        lede="Questions about our programs, resources, or nonprofit mission? We welcome your message and aim to reply within a few business days."
       />
       <section className="mx-auto grid max-w-4xl gap-12 py-14 page-gutter sm:gap-14 sm:py-16 md:grid-cols-[1fr_320px]">
         <div>
@@ -24,30 +27,22 @@ export default function ContactPage() {
         <aside className="space-y-8 text-sm">
           <div>
             <div className="eyebrow mb-2">Email</div>
-            <div className="text-foreground">research@salesbreakdowninstitute.com</div>
+            <a href={`mailto:${email}`} className="text-foreground hover:text-primary">
+              {email}
+            </a>
           </div>
           <div>
             <div className="eyebrow mb-2">Registered Office</div>
-            <div className="text-foreground leading-relaxed">
-              Sales Breakdown Institute
+            <div className="leading-relaxed text-foreground">
+              {siteConfig.name}
               <br />
-              1717 N Street NW, STE 1
+              {legalName}
               <br />
-              Washington, D.C. 20036
+              {address.line1}
               <br />
-              United States
-            </div>
-          </div>
-          <div>
-            <div className="eyebrow mb-2">Mailing / Operations</div>
-            <div className="text-foreground leading-relaxed">
-              Sales Breakdown Institute
+              {address.city}, {address.region} {address.postalCode}
               <br />
-              1968 S. Coast Hwy, #265
-              <br />
-              Laguna Beach, CA 92651
-              <br />
-              United States
+              {address.country}
             </div>
           </div>
         </aside>

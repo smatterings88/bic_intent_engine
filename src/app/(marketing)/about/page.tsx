@@ -3,9 +3,9 @@ import { PageHeader } from "@/components/site/PageHeader";
 import { buildPageMetadata } from "@/lib/build-metadata";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "About — Sales Breakdown Institute",
+  title: "About — Business Impact Canada",
   description:
-    "An independent research initiative committed to objective analysis of sales conversation failures.",
+    "Free communication education for entrepreneurs across Canada. A registered nonprofit foundation.",
   path: "/about",
 });
 
@@ -13,42 +13,41 @@ export default function AboutPage() {
   return (
     <>
       <PageHeader
-        eyebrow="About the Institute"
-        title="An independent voice in sales performance research."
-        lede="The Sales Breakdown Institute exists to study—rigorously and without commercial bias—why sales conversations fail and what that failure costs."
+        eyebrow="About Us"
+        title="Free communication education for Canadian entrepreneurs."
+        lede="Business Impact Canada exists to help entrepreneurs communicate clearly — in marketing, sales, leadership, and execution — so their businesses can make the impact they came here to make."
       />
       <article className="mx-auto max-w-3xl space-y-10 py-14 prose-research page-gutter sm:py-16">
         <section>
           <h2 className="font-serif text-2xl text-foreground mb-4">Purpose</h2>
           <p>
-            Founded as a non-commercial initiative, the Institute publishes structured research on
-            the conversational, behavioral, and structural dynamics that determine whether a sales
-            opportunity advances or stalls. Our work is intended for practitioners, researchers, and
-            educators seeking a clearer understanding of revenue loss as a measurable phenomenon.
+            Founded as a nonprofit, Business Impact Canada publishes free educational resources on
+            communication in marketing, sales, leadership, and execution — the skills entrepreneurs
+            need to build businesses that actually work.
           </p>
         </section>
         <section>
-          <h2 className="font-serif text-2xl text-foreground mb-4">Independence</h2>
+          <h2 className="font-serif text-2xl text-foreground mb-4">Mission</h2>
           <p>
-            The Institute does not sell products, software, or services. It does not accept
-            sponsored research from organizations whose offerings are the subject of study. All
-            findings are published openly and remain free of commercial affiliation.
+            We believe most business problems are communication problems in disguise. Our programs
+            help entrepreneurs find those problems and learn to solve them — at no cost, with no
+            paywalls, and no email gates on core resources.
           </p>
         </section>
         <section>
           <h2 className="font-serif text-2xl text-foreground mb-4">Approach</h2>
           <p>
-            Our methodology draws from structured transcript analysis, longitudinal pipeline
-            tracking, and qualitative interviews with sales professionals across industries.
-            Findings are reviewed internally for analytical rigor before publication.
+            Our content is practical, direct, and built for entrepreneurs who are doing the work —
+            not for consultants selling frameworks. Every program comes back to the same insight:
+            clarity in how you communicate determines whether your business moves forward.
           </p>
         </section>
         <section>
-          <h2 className="font-serif text-2xl text-foreground mb-4">Ethical commitment</h2>
+          <h2 className="font-serif text-2xl text-foreground mb-4">Nonprofit commitment</h2>
           <p>
-            All conversational data referenced in our publications is anonymized and contributed
-            under explicit consent. The Institute is committed to objective insight, transparent
-            methodology, and the responsible handling of all participant data.
+            Business Impact Canada (15213614 Canada Foundation) is a registered Canadian nonprofit.
+            All programs are free — always. Donations fund program delivery for entrepreneurs who
+            need guidance but cannot afford business school or coaching.
           </p>
         </section>
       </article>

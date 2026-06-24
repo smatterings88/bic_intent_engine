@@ -3,8 +3,8 @@ import { PageHeader } from "@/components/site/PageHeader";
 import { buildPageMetadata } from "@/lib/build-metadata";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Privacy Policy — Sales Breakdown Institute",
-  description: "Privacy policy for the Sales Breakdown Institute.",
+  title: "Privacy Policy — Business Impact Canada",
+  description: "Privacy policy for Business Impact Canada.",
   path: "/privacy",
 });
 
@@ -16,9 +16,9 @@ export default function PrivacyPage() {
         <section>
           <h2 className="font-serif text-xl text-foreground mb-3">Overview</h2>
           <p>
-            The Sales Breakdown Institute (&quot;the Institute&quot;) is committed to protecting the
-            privacy of visitors to our website and individuals who correspond with us. This policy
-            outlines what information we collect and how we use it.
+            Business Impact Canada is committed to protecting the privacy of visitors to our website
+            and individuals who correspond with us. This policy outlines what information we collect
+            and how we use it.
           </p>
         </section>
         <section>
@@ -33,9 +33,9 @@ export default function PrivacyPage() {
         <section>
           <h2 className="font-serif text-xl text-foreground mb-3">How we use information</h2>
           <p>
-            Information you provide is used solely to respond to your inquiry and to support the
-            Institute&apos;s research and educational activities. We do not sell, rent, or share
-            personal information with third parties for commercial purposes.
+            Information you provide is used solely to respond to your inquiry and to support our
+            educational programs. We do not sell, rent, or share personal information with third
+            parties for commercial purposes.
           </p>
         </section>
         <section>
@@ -50,7 +50,7 @@ export default function PrivacyPage() {
           <h2 className="font-serif text-xl text-foreground mb-3">Contact</h2>
           <p>
             Questions regarding this policy may be directed to{" "}
-            <span className="text-foreground">research@salesbreakdowninstitute.com</span>.
+            <span className="text-foreground">businessimpactcanada@gmail.com</span>.
           </p>
         </section>
       </article>

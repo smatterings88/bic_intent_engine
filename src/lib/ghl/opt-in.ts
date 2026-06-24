@@ -2,6 +2,7 @@ import "server-only";
 
 import type { GhlCreateContactInput, GhlOptInSyncInput, GhlOptInSyncResult } from "@/types/ghl";
 
+import { siteConfig } from "@/lib/site";
 import { normalizeGhlTags } from "./tags";
 import { syncContactWithTags } from "./sync-contact";
 import { resolveGhlTags } from "./tag-strategy";
@@ -54,7 +55,7 @@ export async function syncLandingPageOptInToGhl(
     firstName: input.firstName?.trim(),
     lastName: input.lastName?.trim(),
     phone: input.phone?.trim(),
-    source: "Sales Breakdown Institute",
+    source: siteConfig.name,
   };
 
   const synced = await syncContactWithTags(createInput, tags);

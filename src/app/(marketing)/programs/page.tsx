@@ -3,8 +3,8 @@ import { PageHeader } from "@/components/site/PageHeader";
 import { buildPageMetadata } from "@/lib/build-metadata";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Programs — Sales Breakdown Institute",
-  description: "Ongoing research programs at the Sales Breakdown Institute.",
+  title: "Programs — Business Impact Canada",
+  description: "Ongoing research programs at Business Impact Canada.",
   path: "/programs",
 });
 

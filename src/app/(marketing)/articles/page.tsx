@@ -9,9 +9,9 @@ import { listPublishedArticles } from "@/lib/articles/read";
 export const revalidate = 3600;
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Articles | Sales Breakdown Institute",
+  title: "Articles | Business Impact Canada",
   description:
-    "Published research and analysis from the Sales Breakdown Institute—where sales conversations break down, and what the evidence says about improving outcomes.",
+    "Published research and analysis from Business Impact Canada—where sales conversations break down, and what the evidence says about improving outcomes.",
   path: "/articles",
 });
 

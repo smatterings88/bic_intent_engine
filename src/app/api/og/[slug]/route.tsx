@@ -35,9 +35,9 @@ function Mark() {
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
       <div style={{ fontSize: 22, fontWeight: 700, color: TEXT, letterSpacing: 1.2 }}>
-        SALES BREAKDOWN INSTITUTE
+        BUSINESS IMPACT CANADA
       </div>
-      <div style={{ fontSize: 14, color: MUTED, letterSpacing: 2 }}>SBI</div>
+      <div style={{ fontSize: 14, color: MUTED, letterSpacing: 2 }}>BIC</div>
     </div>
   );
 }
@@ -59,9 +59,9 @@ function FallbackOg() {
       <ForensicAccent />
       <Mark />
       <div style={{ marginTop: 48, fontSize: 64, fontWeight: 800, color: TEXT, lineHeight: 1.05 }}>
-        Sales Breakdown Institute
+        Business Impact Canada
       </div>
-      <div style={{ marginTop: 20, fontSize: 32, color: MUTED }}>Sales Call Forensics</div>
+      <div style={{ marginTop: 20, fontSize: 32, color: MUTED }}>Free Communication Education</div>
     </div>
   );
 }
@@ -201,8 +201,7 @@ export async function GET(_request: Request, context: { params: Promise<{ slug: 
   }
 
   const template = resolveOgImageTemplate(page);
-  const headline =
-    page.ogImage?.headline?.trim() || page.title?.trim() || "Sales Breakdown Institute";
+  const headline = page.ogImage?.headline?.trim() || page.title?.trim() || "Business Impact Canada";
   const subhead = page.ogImage?.subhead?.trim() || page.seo?.ogDescription?.trim();
   const signal = page.ogImage?.signal?.trim();
   const eyebrow = eyebrowForTemplate(template);

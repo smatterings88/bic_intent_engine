@@ -2,7 +2,7 @@
 
 ## Summary
 
-This phase prepares the **Sales Breakdown Institute** Next.js app (public marketing site + Firebase-backed `/app` shell) for **first deployment on Vercel** before Phase 3 content-engine work. No new product features were added: only deployment verification, optional root `README.md`, and this documentation.
+This phase prepares the **Business Impact Canada** Next.js app (public marketing site + Firebase-backed `/app` shell) for **first deployment on Vercel** before Phase 3 content-engine work. No new product features were added: only deployment verification, optional root `README.md`, and this documentation.
 
 The marketing site **builds without Firebase environment variables** (`getPublicFirebaseConfig` / `getServerFirebaseConfig` run only when Firebase helpers are invoked). On Vercel, set all listed variables so `/app/login`, profile sync, and Admin-backed paths work in the environments where you test them.
 
@@ -34,7 +34,7 @@ The marketing site **builds without Firebase environment variables** (`getPublic
 - `eslint.config.mjs` — ignores `legacy/**`
 - `postcss.config.mjs` — Tailwind v4 PostCSS only
 - `.env.example` — `NEXT_PUBLIC_SITE_URL` + Firebase client/server + optional App Check
-- `src/lib/site.ts` — production URL from env with `https://salesbreakdowninstitute.com` fallback; OG/Twitter image path `/favicon.png`
+- `src/lib/site.ts` — production URL from env with `https://businessimpactcanada.com` fallback; OG/Twitter image path `/favicon.png`
 - No root `vercel.json` — Vercel auto-detects Next.js (no override needed)
 
 ---
@@ -47,7 +47,7 @@ Set these in the Vercel project (**Settings → Environment Variables**). Use **
 
 | Variable                                   | Example / note                                |
 | ------------------------------------------ | --------------------------------------------- |
-| `NEXT_PUBLIC_SITE_URL`                     | `https://salesbreakdowninstitute.com`         |
+| `NEXT_PUBLIC_SITE_URL`                     | `https://businessimpactcanada.com`         |
 | `NEXT_PUBLIC_FIREBASE_API_KEY`             | From Firebase Web app config                  |
 | `NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN`         | Typically `project-id.firebaseapp.com`        |
 | `NEXT_PUBLIC_FIREBASE_PROJECT_ID`          | Firebase project ID                           |
@@ -102,10 +102,10 @@ Do **not** add GHL or ZenithMind variables in this phase.
 11. If Firebase Auth (Email/Password) is enabled, create a **test account** or sign in.
 12. Confirm **`/app/dashboard`** redirects to **`/app/login`** when signed out.
 13. After sign-in, confirm **`/app/dashboard`** and **`/app/account`** load.
-14. In Vercel, attach **custom domain** `salesbreakdowninstitute.com` (and `www` if used) per your DNS plan.
+14. In Vercel, attach **custom domain** `businessimpactcanada.com` (and `www` if used) per your DNS plan.
 15. Follow Vercel’s **DNS** instructions at your registrar until the domain verifies.
 16. Confirm **SSL** is active for the custom domain in the Vercel dashboard.
-17. Set **`NEXT_PUBLIC_SITE_URL`** to `https://salesbreakdowninstitute.com` for **Production** (adjust if you standardize on `www`).
+17. Set **`NEXT_PUBLIC_SITE_URL`** to `https://businessimpactcanada.com` for **Production** (adjust if you standardize on `www`).
 18. **Redeploy** after changing production env or domain settings so all nodes pick up values.
 
 ---
@@ -139,7 +139,7 @@ App (Firebase-dependent for full behavior):
 - [ ] Footer links work (privacy, terms, contact, etc.).
 - [ ] Public pages render **without** Firebase console errors when Firebase env is **not** required for static HTML (client-only Firebase runs in the browser on `/app` routes).
 - [ ] **Metadata** title/description look correct in the tab and in “View source” / devtools.
-- [ ] **Canonical** and OG URLs resolve to `https://salesbreakdowninstitute.com` (or your configured `NEXT_PUBLIC_SITE_URL`) when production env is set.
+- [ ] **Canonical** and OG URLs resolve to `https://businessimpactcanada.com` (or your configured `NEXT_PUBLIC_SITE_URL`) when production env is set.
 - [ ] **Mobile** layout: header, content, footer usable on a narrow viewport.
 - [ ] **`/app/login`** loads; errors are clear if `NEXT_PUBLIC_*` Firebase vars are missing.
 - [ ] **Email/password sign-up / sign-in** works when Firebase Auth and env vars are configured.
@@ -159,7 +159,7 @@ Before or right after first deploy, in the [Firebase console](https://console.fi
 2. **Firestore** — Create the database; deploy **`firestore.rules`** from the repo (CLI or Console rules editor) when ready.
 3. **Storage** — Enable default bucket; deploy **`storage.rules`** from the repo when ready.
 4. **Authentication → Settings → Authorized domains** — Add:
-   - `salesbreakdowninstitute.com` (and `www` if applicable)
+   - `businessimpactcanada.com` (and `www` if applicable)
    - Your **Vercel preview** host (e.g. `*.vercel.app`) if you test auth on previews
 
 See **`docs/phase-2-firebase-foundation.md`** for local `.env.local` and service account mapping.

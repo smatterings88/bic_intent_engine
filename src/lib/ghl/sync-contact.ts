@@ -7,7 +7,9 @@ import { getContactId } from "./contact-id";
 import { GHLApiError } from "./errors";
 import { applyTagsToContact, normalizeGhlTags } from "./tags";
 
-const DEFAULT_SOURCE = "Sales Breakdown Institute";
+import { siteConfig } from "@/lib/site";
+
+const DEFAULT_SOURCE = siteConfig.name;
 
 export type SyncContactWithTagsResult = {
   contact: GhlContact;

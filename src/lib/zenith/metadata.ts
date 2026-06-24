@@ -6,7 +6,7 @@ import { getCanonicalPathForZenithPage, getBaseUrl, buildAbsoluteUrl } from "@/l
 import { getOgImageUrlForPage } from "@/lib/zenith/og";
 
 const FALLBACK_DESC =
-  "Sales call forensics, deal signals, and practical breakdowns from the Sales Breakdown Institute.";
+  "Free communication education for entrepreneurs from Business Impact Canada. Nonprofit-backed, always free.";
 
 export function buildZenithPageMetadata(
   page: ZenithPage,
@@ -15,7 +15,7 @@ export function buildZenithPageMetadata(
 ): Metadata {
   const base = baseUrl ?? getBaseUrl();
   const resolvedOgImageUrl = getOgImageUrlForPage(page, base);
-  const title = page.seo?.metaTitle?.trim() || page.title?.trim() || "Sales Breakdown Institute";
+  const title = page.seo?.metaTitle?.trim() || page.title?.trim() || "Business Impact Canada";
   const description =
     page.seo?.metaDescription?.trim() || page.seo?.ogDescription?.trim() || FALLBACK_DESC;
   const canonicalPath = getCanonicalPathForZenithPage(page);

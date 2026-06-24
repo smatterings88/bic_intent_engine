@@ -6,7 +6,9 @@ import { getContactId, getContactIdFromPayload } from "./contact-id";
 import { GHLApiError } from "./errors";
 import { ghlLocationId, ghlRequest } from "./request";
 
-const DEFAULT_SOURCE = "Sales Breakdown Institute";
+import { siteConfig } from "@/lib/site";
+
+const DEFAULT_SOURCE = siteConfig.name;
 
 export function normalizeGhlContactsResponse(data: unknown): GhlContact[] {
   if (Array.isArray(data)) {

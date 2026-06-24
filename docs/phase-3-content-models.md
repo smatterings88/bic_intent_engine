@@ -2,7 +2,7 @@
 
 ## Summary
 
-This phase defines **data contracts only** for the Sales Breakdown Institute intent content engine: TypeScript types, **Zod** validation schemas, Firestore collection naming, path helpers, slug rules, and **seed examples** that parse cleanly. No ingestion HTTP routes, no ISR pages, no GHL sync, no uploads, no breakdown pipeline, and no admin UI were added.
+This phase defines **data contracts only** for Business Impact Canada intent content engine: TypeScript types, **Zod** validation schemas, Firestore collection naming, path helpers, slug rules, and **seed examples** that parse cleanly. No ingestion HTTP routes, no ISR pages, no GHL sync, no uploads, no breakdown pipeline, and no admin UI were added.
 
 ---
 

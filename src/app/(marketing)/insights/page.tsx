@@ -3,9 +3,8 @@ import { PageHeader } from "@/components/site/PageHeader";
 import { buildPageMetadata } from "@/lib/build-metadata";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Insights — Sales Breakdown Institute",
-  description:
-    "Short-form research notes and analytical commentary from the Sales Breakdown Institute.",
+  title: "Insights — Business Impact Canada",
+  description: "Short-form research notes and analytical commentary from Business Impact Canada.",
   path: "/insights",
 });
 
@@ -74,7 +73,7 @@ export default function InsightsPage() {
       <PageHeader
         eyebrow="Insights"
         title="Research notes and analytical commentary."
-        lede="Short-form writing from the Institute, accompanying our longer research publications."
+        lede="Short-form writing from Business Impact Canada, accompanying our longer guides and programs."
       />
       <section className="mx-auto max-w-4xl py-14 page-gutter sm:py-16">
         <div className="grid md:grid-cols-2 gap-px bg-border border border-border">

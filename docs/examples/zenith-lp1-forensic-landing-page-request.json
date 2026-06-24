@@ -7,7 +7,7 @@
   "slug": "why-good-calls-dont-close",
   "title": "The Call Felt Fine. The Buyer Mentally Left 20 Minutes Earlier.",
   "seo": {
-    "metaTitle": "Why Good Calls Don't Close | Sales Breakdown Institute",
+    "metaTitle": "Why Good Calls Don't Close | Business Impact Canada",
     "metaDescription": "Forensic analysis of recorded sales calls: where buyers quietly disengage, drift markers, and the exact moment deals die before the call ends."
   },
   "ogImage": {
@@ -90,7 +90,7 @@
         ],
         "verdictLabel": "Sherpa Verdict",
         "verdict": "Deal gone at 19:08. Salesperson kept selling for 22 more minutes.",
-        "footer": "Free Forensic Analysis · SalesBreakdownInstitute.com"
+        "footer": "Free Forensic Analysis · BusinessImpactCanada.com"
       }
     },
     {
@@ -136,7 +136,7 @@
     {
       "type": "credibility-bar",
       "variant": "forensic",
-      "text": "Sales Breakdown Institute is a nonprofit research organization analyzing conversational drift in recorded B2B sales calls.",
+      "text": "Business Impact Canada is a nonprofit research organization analyzing conversational drift in recorded B2B sales calls.",
       "emphasis": ["nonprofit research organization", "conversational drift"]
     },
     {

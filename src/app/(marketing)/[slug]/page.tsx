@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   if (!isValidSlug(slug) || isReservedTopLevelSlug(slug)) {
     return {
-      title: "Page | Sales Breakdown Institute",
+      title: "Page | Business Impact Canada",
       robots: { index: false, follow: false },
     };
   }
@@ -48,7 +48,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     return buildZenithPageMetadata(zenith);
   }
   return {
-    title: "Page | Sales Breakdown Institute",
+    title: "Page | Business Impact Canada",
     robots: { index: false, follow: false },
   };
 }

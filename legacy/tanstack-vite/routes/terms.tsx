@@ -4,8 +4,8 @@ import { PageHeader } from "@/components/SiteLayout";
 export const Route = createFileRoute("/terms")({
   head: () => ({
     meta: [
-      { title: "Terms of Use — Sales Breakdown Institute" },
-      { name: "description", content: "Terms of use for the Sales Breakdown Institute website." },
+      { title: "Terms of Use — Business Impact Canada" },
+      { name: "description", content: "Terms of use for Business Impact Canada website." },
     ],
   }),
   component: TermsPage,
@@ -19,7 +19,7 @@ function TermsPage() {
         <section>
           <h2 className="font-serif text-xl text-foreground mb-3">Acceptance</h2>
           <p>
-            By accessing the Sales Breakdown Institute website, you agree to these terms. If you do
+            By accessing the Business Impact Canada website, you agree to these terms. If you do
             not agree, please discontinue use of the site.
           </p>
         </section>

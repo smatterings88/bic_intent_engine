@@ -1,6 +1,6 @@
-# Sales Breakdown Institute — Next.js
+# Business Impact Canada — Next.js
 
-Marketing site and authenticated **app shell** for the Sales Breakdown Institute, built with **Next.js** (App Router), **TypeScript**, **Tailwind CSS**, and **Firebase**. Deployed on **Vercel**.
+Marketing site and authenticated **app shell** for Business Impact Canada, built with **Next.js** (App Router), **TypeScript**, **Tailwind CSS**, and **Firebase**. Deployed on **Vercel**.
 
 Legacy **TanStack Start / Vite** sources are archived under **`legacy/tanstack-vite/`** and are excluded from the active Next.js build.
 

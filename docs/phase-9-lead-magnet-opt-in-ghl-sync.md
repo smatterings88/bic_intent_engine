@@ -51,7 +51,7 @@ No GHL secrets are exposed to the browser; no client Firestore writes.
 | `GHL_PIT_TOKEN`    | **Required** — Private Integration Token (`pit-…`). See `docs/GHL_API_Integration_Notes.md`. |
 | `GHL_LOCATION_ID`  | **Required** for v2 contact search/create.                                |
 | `GHL_API_BASE_URL` | Defaults to `https://services.leadconnectorhq.com`.                         |
-| `GHL_USER_AGENT`   | Defaults to `SalesBreakdownInstitute/1.0`.                                |
+| `GHL_USER_AGENT`   | Defaults to `BusinessImpactCanada/1.0`.                                |
 | `GHL_API_KEY`      | **Deprecated** — fallback only if `GHL_PIT_TOKEN` unset.                  |
 
 None use the `NEXT_PUBLIC_` prefix.
@@ -79,7 +79,7 @@ None use the `NEXT_PUBLIC_` prefix.
 - **Search:** `POST /contacts/search` with `locationId`, `query` (email), `pageLimit`, `page` (v2).
 - **Normalize:** Supports `contacts` array, single `contact`, nested `data.*`, or top-level array.
 - **Exact email:** Trim + lowercase comparison on returned contacts.
-- **Create/update:** `POST /contacts/upsert` with `locationId`, email, optional fields, `source` defaulting to **Sales Breakdown Institute** (fallback `POST /contacts/` if needed).
+- **Create/update:** `POST /contacts/upsert` with `locationId`, email, optional fields, `source` defaulting to **Business Impact Canada** (fallback `POST /contacts/` if needed).
 - **Tags:** `POST /contacts/{id}/tags` to add tags without wiping existing.
 - **Update fields:** `PUT /contacts/{id}` for standard fields (no `locationId` in body).
 

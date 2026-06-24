@@ -26,7 +26,7 @@ function Header() {
           <span className="flex h-7 w-7 items-center justify-center rounded-sm bg-primary text-primary-foreground font-serif text-sm">
             S
           </span>
-          <span className="font-serif text-base text-foreground">Sales Breakdown Institute</span>
+          <span className="font-serif text-base text-foreground">Business Impact Canada</span>
         </Link>
         <nav className="hidden md:flex items-center gap-7 text-sm">
           {navLinks.map((l) => (
@@ -50,37 +50,26 @@ function Footer() {
     <footer className="border-t border-border bg-secondary/40 mt-24">
       <div className="mx-auto max-w-6xl px-6 py-14 grid gap-10 md:grid-cols-4">
         <div className="md:col-span-2 max-w-md">
-          <div className="font-serif text-foreground text-lg">Sales Breakdown Institute</div>
+          <div className="font-serif text-foreground text-lg">Business Impact Canada</div>
           <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
-            Sales Breakdown Institute is an independent research initiative focused on sales
-            performance analysis and educational insights.
-          </p>
-          <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
-            Sales Breakdown Institute, formerly known as the Digital Builders Association, is a
-            registered 501(c)(3) nonprofit corporation in Washington, D.C.
+            Free business education for impact-driven entrepreneurs across Canada. A registered
+            nonprofit foundation. All programs free — always.
           </p>
           <div className="mt-5 text-sm text-muted-foreground space-y-4">
-            <div>research@salesbreakdowninstitute.com</div>
-            <div>
-              <div className="text-xs uppercase tracking-wider text-muted-foreground/80 mb-1">
-                Mailing Address
-              </div>
-              <div>1968 S. Coast Hwy, #265</div>
-              <div>Laguna Beach, CA 92651</div>
-              <div>United States</div>
-            </div>
+            <div>businessimpactcanada@gmail.com</div>
             <div>
               <div className="text-xs uppercase tracking-wider text-muted-foreground/80 mb-1">
                 Registered Office
               </div>
-              <div>1717 N Street NW, STE 1</div>
-              <div>Washington, D.C. 20036</div>
-              <div>United States</div>
+              <div>15213614 Canada Foundation</div>
+              <div>1771 Robson Street</div>
+              <div>Vancouver, BC V6G 3B7</div>
+              <div>Canada</div>
             </div>
           </div>
         </div>
         <div>
-          <div className="eyebrow mb-3">Institute</div>
+          <div className="eyebrow mb-3">Organization</div>
           <ul className="space-y-2 text-sm">
             <FooterLink to="/about">About</FooterLink>
             <FooterLink to="/research">Research</FooterLink>
@@ -99,8 +88,8 @@ function Footer() {
       </div>
       <div className="border-t border-border">
         <div className="mx-auto max-w-6xl px-6 py-5 text-xs text-muted-foreground flex flex-col md:flex-row justify-between gap-2">
-          <div>© {new Date().getFullYear()} Sales Breakdown Institute. All rights reserved.</div>
-          <div>Independent research · Non-commercial</div>
+          <div>© {new Date().getFullYear()} Business Impact Canada. All rights reserved.</div>
+          <div>Registered Canadian nonprofit · All programs free</div>
         </div>
       </div>
     </footer>

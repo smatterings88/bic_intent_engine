@@ -32,7 +32,7 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Sales Breakdown Institute — Independent Sales Performance Research" },
+      { title: "Business Impact Canada — Independent Sales Performance Research" },
       {
         name: "description",
         content:
@@ -40,7 +40,7 @@ export const Route = createRootRoute({
       },
       {
         property: "og:title",
-        content: "Sales Breakdown Institute — Independent Sales Performance Research",
+        content: "Business Impact Canada — Independent Sales Performance Research",
       },
       {
         property: "og:description",
@@ -51,7 +51,7 @@ export const Route = createRootRoute({
       { name: "twitter:card", content: "summary" },
       {
         name: "twitter:title",
-        content: "Sales Breakdown Institute — Independent Sales Performance Research",
+        content: "Business Impact Canada — Independent Sales Performance Research",
       },
       {
         name: "twitter:description",

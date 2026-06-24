@@ -68,7 +68,7 @@ On public routes, `layout.hideGlobalFooter` is resolved **on the server** from t
 
 ```bash
 export ZENITH_CONTENT_SECRET="..."
-export BASE_URL="https://salesbreakdowninstitute.com"
+export BASE_URL="https://businessimpactcanada.com"
 
 curl -i -X POST "$BASE_URL/api/zenith/content" \
   -H "Authorization: Bearer $ZENITH_CONTENT_SECRET" \

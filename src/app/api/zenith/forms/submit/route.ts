@@ -2,6 +2,7 @@ import { FieldValue } from "firebase-admin/firestore";
 
 import { CONTENT_COLLECTIONS } from "@/lib/content/constants";
 import { ensureFirebaseAdmin } from "@/lib/firebase/admin";
+import { siteConfig } from "@/lib/site";
 import { syncContactWithTags } from "@/lib/ghl/sync-contact";
 import { GHLApiError } from "@/lib/ghl/errors";
 import { getGhlApiBaseUrl, getGhlLocationId } from "@/lib/env";
@@ -206,7 +207,7 @@ export async function POST(request: Request) {
           email,
           firstName: first || undefined,
           lastName: last,
-          source: "Sales Breakdown Institute",
+          source: siteConfig.name,
         },
         intendedGhlTags,
       );

@@ -4,8 +4,8 @@ import { PageHeader } from "@/components/SiteLayout";
 export const Route = createFileRoute("/privacy")({
   head: () => ({
     meta: [
-      { title: "Privacy Policy — Sales Breakdown Institute" },
-      { name: "description", content: "Privacy policy for the Sales Breakdown Institute." },
+      { title: "Privacy Policy — Business Impact Canada" },
+      { name: "description", content: "Privacy policy for Business Impact Canada." },
     ],
   }),
   component: PrivacyPage,
@@ -19,7 +19,7 @@ function PrivacyPage() {
         <section>
           <h2 className="font-serif text-xl text-foreground mb-3">Overview</h2>
           <p>
-            The Sales Breakdown Institute ("the Institute") is committed to protecting the privacy
+            Business Impact Canada ("the Institute") is committed to protecting the privacy
             of visitors to our website and individuals who correspond with us. This policy outlines
             what information we collect and how we use it.
           </p>
@@ -53,7 +53,7 @@ function PrivacyPage() {
           <h2 className="font-serif text-xl text-foreground mb-3">Contact</h2>
           <p>
             Questions regarding this policy may be directed to{" "}
-            <span className="text-foreground">research@salesbreakdowninstitute.com</span>.
+            <span className="text-foreground">businessimpactcanada@gmail.com</span>.
           </p>
         </section>
       </article>
