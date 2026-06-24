@@ -11,6 +11,8 @@
     "validate:content": "tsx scripts/validate-content-schemas.ts",
     "deploy:firestore-rules": "npx firebase-tools deploy --only firestore:rules",
     "deploy:firestore-indexes": "npx firebase-tools deploy --only firestore:indexes",
+    "deploy:storage-rules": "npx firebase-tools deploy --only storage",
+    "deploy:firebase": "npx firebase-tools deploy --only firestore,storage",
     "validate:zenith-examples": "tsx scripts/validate-zenith-examples.ts",
     "validate:zenith-html-css": "tsx scripts/validate-zenith-html-css.tsx",
     "validate:article-rotation": "tsx scripts/validate-article-rotation.ts",
