@@ -1,0 +1,47 @@
+{
+  "source": "zenithmind",
+  "contentType": "lead_magnet_page",
+  "status": "published",
+  "slug": "seven-hidden-moments-guide",
+  "title": "Seven Hidden Moments",
+  "seo": {
+    "metaTitle": "Seven Hidden Moments | Sales Breakdown Institute",
+    "metaDescription": "The micro-signals that show where a deal actually stands.",
+    "canonicalPath": "/guides/seven-hidden-moments-guide",
+    "noindex": false
+  },
+  "ogImage": {
+    "template": "lead-magnet",
+    "headline": "Seven Hidden Moments",
+    "subhead": "What the recording already knows about your deal."
+  },
+  "ghlTagStrategy": {
+    "mode": "merge",
+    "tags": ["sbi --> zenith guide"]
+  },
+  "components": [
+    {
+      "type": "page-hero",
+      "eyebrow": "FREE GUIDE",
+      "headline": "Seven Hidden Moments",
+      "subheadline": "Read the signals your champion cannot name.",
+      "primaryCta": {
+        "label": "Download",
+        "destination": "lead-magnet:7-hidden-moments"
+      }
+    },
+    {
+      "type": "body-section",
+      "heading": "Why this matters",
+      "body": "Most stalled deals look fine on paper until you listen for the moments language thins and commitment softens."
+    },
+    {
+      "type": "lead-form",
+      "variant": "lead-magnet-capture",
+      "headline": "Send the guide",
+      "destination": "lead-magnet:7-hidden-moments",
+      "ctaText": "Email me the PDF",
+      "thankYouMessage": "Check your inbox for the guide."
+    }
+  ]
+}

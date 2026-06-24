@@ -1,0 +1,348 @@
+{
+  "routes": [
+    {
+      "path": "/",
+      "file": "src/routes/index.tsx",
+      "headSource": "route head() + root defaults",
+      "notes": "Homepage hero, mission, stats, research areas, findings"
+    },
+    {
+      "path": "/about",
+      "file": "src/routes/about.tsx",
+      "headSource": "route head()",
+      "notes": "Uses PageHeader from SiteLayout"
+    },
+    {
+      "path": "/research",
+      "file": "src/routes/research.tsx",
+      "headSource": "route head()",
+      "notes": "Links to /where-deals-break; in-file reports data"
+    },
+    {
+      "path": "/programs",
+      "file": "src/routes/programs.tsx",
+      "headSource": "route head()",
+      "notes": "In-file programs array"
+    },
+    {
+      "path": "/insights",
+      "file": "src/routes/insights.tsx",
+      "headSource": "route head()",
+      "notes": "Static insight cards; not dynamic /articles/[slug]"
+    },
+    {
+      "path": "/contact",
+      "file": "src/routes/contact.tsx",
+      "headSource": "route head()",
+      "notes": "useState form; client-only submit behavior"
+    },
+    {
+      "path": "/privacy",
+      "file": "src/routes/privacy.tsx",
+      "headSource": "route head()",
+      "notes": "Legal"
+    },
+    {
+      "path": "/terms",
+      "file": "src/routes/terms.tsx",
+      "headSource": "route head()",
+      "notes": "Legal"
+    },
+    {
+      "path": "/where-deals-break",
+      "file": "src/routes/where-deals-break.tsx",
+      "headSource": "route head()",
+      "notes": "Long-form report; local Section/Callout components"
+    }
+  ],
+  "components": [
+    {
+      "name": "SiteLayout",
+      "path": "src/components/SiteLayout.tsx",
+      "futurePath": "src/components/site/SiteLayout.tsx",
+      "category": "layout",
+      "dependencies": ["@tanstack/react-router"],
+      "notes": "Header, Footer, main wrapper; exports PageHeader"
+    },
+    {
+      "name": "PageHeader",
+      "path": "src/components/SiteLayout.tsx",
+      "futurePath": "src/components/site/PageHeader.tsx",
+      "category": "layout",
+      "dependencies": [],
+      "notes": "Eyebrow + serif title + optional lede"
+    },
+    {
+      "name": "cn",
+      "path": "src/lib/utils.ts",
+      "futurePath": "src/lib/utils.ts",
+      "category": "utility",
+      "dependencies": ["clsx", "tailwind-merge"],
+      "notes": "shadcn standard"
+    },
+    {
+      "name": "useIsMobile",
+      "path": "src/hooks/use-mobile.tsx",
+      "futurePath": "src/hooks/use-mobile.tsx",
+      "category": "hook",
+      "dependencies": ["window.matchMedia"],
+      "notes": "Requires use client in Next"
+    },
+    {
+      "name": "shadcn/ui primitives",
+      "path": "src/components/ui/",
+      "futurePath": "src/components/ui/",
+      "category": "ui-library",
+      "dependencies": ["@radix-ui/*", "lucide-react"],
+      "notes": "Full set from components.json; many interactive = client components"
+    },
+    {
+      "name": "DefaultErrorComponent",
+      "path": "src/router.tsx",
+      "futurePath": "N/A — replace with app/error.tsx patterns",
+      "category": "error-ui",
+      "dependencies": ["@tanstack/react-router", "import.meta.env"],
+      "notes": "TanStack-specific reset/invalidate"
+    },
+    {
+      "name": "RootShell / head config",
+      "path": "src/routes/__root.tsx",
+      "futurePath": "src/app/layout.tsx + metadata",
+      "category": "document-shell",
+      "dependencies": ["@tanstack/react-router"],
+      "notes": "HeadContent, Scripts, meta, links, NotFound"
+    },
+    {
+      "name": "ReportSection primitives",
+      "path": "src/routes/where-deals-break.tsx",
+      "futurePath": "src/components/site/report/",
+      "category": "page-local",
+      "dependencies": [],
+      "notes": "Section, Subsection, Callout, Meta — optional extract"
+    },
+    {
+      "name": "Contact form helpers",
+      "path": "src/routes/contact.tsx",
+      "futurePath": "src/components/forms/contact/",
+      "category": "form",
+      "dependencies": ["react useState"],
+      "notes": "Field + inputCls; whole page likely client"
+    }
+  ],
+  "styles": [
+    {
+      "path": "src/styles.css",
+      "role": "global",
+      "tailwindVersion": "4.2.1",
+      "notes": "@import tailwindcss; @theme inline; :root OKLCH tokens; @layer base/components; tw-animate-css"
+    },
+    {
+      "path": "vite.config.ts",
+      "role": "build",
+      "notes": "Re-exports @lovable.dev/vite-tanstack-config — Tailwind via Vite plugin"
+    },
+    {
+      "path": "components.json",
+      "role": "shadcn-config",
+      "notes": "New York, slate, cssVariables, rsc: false, tailwind css path src/styles.css"
+    }
+  ],
+  "assets": [
+    {
+      "path": "public/favicon.png",
+      "usage": "Favicon and apple-touch-icon via __root.tsx links",
+      "type": "image"
+    },
+    {
+      "path": "external:og:image",
+      "usage": "__root.tsx meta og:image and twitter:image",
+      "type": "url",
+      "url": "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/f4e3ecee-4dc8-4b88-b451-e8fa3c0ce67b/id-preview-accc1b82--5bdd300a-b5f7-4fe2-a65f-6dc14eb054f7.lovable.app-1777976080769.png"
+    }
+  ],
+  "contentBlocks": [
+    {
+      "id": "root-default-metadata",
+      "file": "src/routes/__root.tsx",
+      "kind": "seo",
+      "summary": "Default title, description, OG/Twitter tags for site"
+    },
+    {
+      "id": "homepage-hero",
+      "file": "src/routes/index.tsx",
+      "kind": "hero",
+      "summary": "Independent Research Initiative eyebrow; H1 on conversation breakdown; institute positioning paragraph; CTAs"
+    },
+    {
+      "id": "homepage-mission-stats-findings",
+      "file": "src/routes/index.tsx",
+      "kind": "sections",
+      "summary": "Mission, why research matters + statistics, researchAreas grid, findings list"
+    },
+    {
+      "id": "footer-institute-legal",
+      "file": "src/components/SiteLayout.tsx",
+      "kind": "footer",
+      "summary": "501(c)(3) language, addresses, email, copyright, Independent research tagline"
+    },
+    {
+      "id": "about-body",
+      "file": "src/routes/about.tsx",
+      "kind": "page",
+      "summary": "Purpose, Independence, Approach, Ethical commitment"
+    },
+    {
+      "id": "research-list",
+      "file": "src/routes/research.tsx",
+      "kind": "page",
+      "summary": "Featured Where Deals Break card; reports abstracts"
+    },
+    {
+      "id": "programs-list",
+      "file": "src/routes/programs.tsx",
+      "kind": "page",
+      "summary": "Three programs with threads"
+    },
+    {
+      "id": "insights-cards",
+      "file": "src/routes/insights.tsx",
+      "kind": "page",
+      "summary": "Dated insight cards grid"
+    },
+    {
+      "id": "contact-copy-form",
+      "file": "src/routes/contact.tsx",
+      "kind": "page",
+      "summary": "Inquiry copy, form labels, thank you message, sidebar addresses"
+    },
+    {
+      "id": "privacy-terms",
+      "file": "src/routes/privacy.tsx, src/routes/terms.tsx",
+      "kind": "legal",
+      "summary": "Full legal sections; last updated January 2026"
+    },
+    {
+      "id": "report-where-deals-break",
+      "file": "src/routes/where-deals-break.tsx",
+      "kind": "longform",
+      "summary": "Full research report sections 1–9, callouts, limitations, internal analysis list"
+    },
+    {
+      "id": "not-found",
+      "file": "src/routes/__root.tsx",
+      "kind": "error",
+      "summary": "404 messaging"
+    }
+  ],
+  "migrationRisks": [
+    {
+      "risk": "TanStack Router/Start APIs throughout",
+      "where": ["src/routes", "src/router.tsx", "src/components/SiteLayout.tsx"],
+      "recommendedFix": "Map to Next App Router pages/layouts/metadata; remove routeTree.gen dependency"
+    },
+    {
+      "risk": "import.meta.env in error component",
+      "where": ["src/router.tsx"],
+      "recommendedFix": "Use NODE_ENV or Next-supported env pattern in error boundary"
+    },
+    {
+      "risk": "Cloudflare worker build path (wrangler + dual dist)",
+      "where": ["wrangler.jsonc", "package.json", "vite toolchain"],
+      "recommendedFix": "Vercel uses next build; separate Cloudflare artifacts from Next deploy"
+    },
+    {
+      "risk": "Hardcoded external social preview image URLs",
+      "where": ["src/routes/__root.tsx"],
+      "recommendedFix": "Self-host OG image; set metadataBase in Next"
+    },
+    {
+      "risk": "Fonts loaded via external stylesheet links",
+      "where": ["src/routes/__root.tsx"],
+      "recommendedFix": "next/font/google for Inter and Source Serif 4"
+    },
+    {
+      "risk": "window/document in hooks and some UI",
+      "where": ["src/hooks/use-mobile.tsx", "src/components/ui/sidebar.tsx"],
+      "recommendedFix": "use client boundaries; avoid importing client modules into server layouts"
+    },
+    {
+      "risk": "Contact form has no server integration",
+      "where": ["src/routes/contact.tsx"],
+      "recommendedFix": "Phase 2+ Server Action or API route + GHL as per product plan"
+    },
+    {
+      "risk": "Future root dynamic [slug] may shadow static routes",
+      "where": ["planned Next structure"],
+      "recommendedFix": "Route groups, explicit static segments, or middleware slug allowlist"
+    }
+  ],
+  "recommendedNextStructure": {
+    "src": {
+      "app": {
+        "layout.tsx": "root layout + metadata + fonts",
+        "page.tsx": "home /",
+        "about": { "page.tsx": "" },
+        "research": { "page.tsx": "" },
+        "programs": { "page.tsx": "" },
+        "insights": { "page.tsx": "" },
+        "contact": { "page.tsx": "" },
+        "privacy": { "page.tsx": "" },
+        "terms": { "page.tsx": "" },
+        "where-deals-break": { "page.tsx": "" },
+        "articles": {
+          "[slug]": { "page.tsx": "ISR article pages (future)" }
+        },
+        "[slug]": { "page.tsx": "ISR landing pages (future); routing guard needed" },
+        "app": {
+          "layout.tsx": "authenticated shell (future)",
+          "login": { "page.tsx": "" },
+          "dashboard": { "page.tsx": "" },
+          "upload": { "page.tsx": "" },
+          "breakdown": { "[id]": { "page.tsx": "" } },
+          "account": { "page.tsx": "" },
+          "admin": {
+            "page.tsx": "",
+            "articles": { "page.tsx": "" },
+            "landing-pages": { "page.tsx": "" },
+            "lead-magnets": { "page.tsx": "" },
+            "ingestions": { "page.tsx": "" },
+            "leads": { "page.tsx": "" },
+            "submissions": { "page.tsx": "" }
+          }
+        },
+        "api": {
+          "zenith": {
+            "articles": { "route.ts": "" },
+            "landing-pages": { "route.ts": "" },
+            "lead-magnets": { "route.ts": "" },
+            "batch": { "route.ts": "" }
+          },
+          "ghl": {
+            "opt-in": { "route.ts": "" },
+            "health": { "route.ts": "" },
+            "custom-fields": { "route.ts": "" }
+          },
+          "revalidate": { "route.ts": "" }
+        },
+        "sitemap.ts": "",
+        "robots.ts": ""
+      },
+      "components": {
+        "site": "",
+        "intent": "",
+        "app": "",
+        "admin": "",
+        "forms": ""
+      },
+      "lib": {
+        "firebase": "",
+        "zenith": "",
+        "ghl": "",
+        "seo": "",
+        "links": "",
+        "tracking": ""
+      },
+      "types": ""
+    }
+  }
+}

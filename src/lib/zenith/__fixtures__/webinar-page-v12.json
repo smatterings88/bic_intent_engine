@@ -1,0 +1,57 @@
+{
+  "source": "zenithmind",
+  "contentType": "webinar_page",
+  "status": "draft",
+  "slug": "sherpa-webinar-may14",
+  "title": "Sherpa Webinar — May 14",
+  "seo": {
+    "metaTitle": "Sherpa Webinar | Sales Breakdown Institute",
+    "metaDescription": "Live breakdown of where enterprise deals quietly die.",
+    "canonicalPath": "/webinars/sherpa-webinar-may14",
+    "noindex": true
+  },
+  "ogImage": {
+    "template": "webinar-event",
+    "headline": "Sherpa Webinar",
+    "subhead": "Enterprise deal forensics, live.",
+    "signal": "May 14 · 12:00 PM ET"
+  },
+  "components": [
+    {
+      "type": "page-hero",
+      "variant": "webinar",
+      "headline": "Sherpa Webinar",
+      "subheadline": "Where enterprise deals quietly die — and how to see it coming.",
+      "primaryCta": {
+        "label": "Save a seat",
+        "destination": "webinar:sherpa-webinar-may14"
+      }
+    },
+    {
+      "type": "body-section",
+      "heading": "What we cover",
+      "body": "A live walkthrough of call signals that precede churn, ghosting, and late-stage surprises."
+    },
+    {
+      "type": "speaker-block",
+      "name": "Jordan Vale",
+      "title": "Principal, Sales Breakdown Institute",
+      "bio": "Forensic review of 2,000+ B2B calls across SaaS and services."
+    },
+    {
+      "type": "webinar-urgency-block",
+      "eventDate": "May 14, 12:00 PM ET",
+      "seatsRemaining": 40,
+      "message": "Seats are limited for live Q&A.",
+      "cta": { "label": "Register", "destination": "webinar:sherpa-webinar-may14" }
+    },
+    {
+      "type": "lead-form",
+      "variant": "webinar-signup",
+      "headline": "Reserve your seat",
+      "destination": "webinar:sherpa-webinar-may14",
+      "ctaText": "Register",
+      "thankYouMessage": "You are registered. Calendar invite sent."
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isSignedIn() && request.auth.uid == userId;
+    }
+
+    match /users/{userId} {
+      allow read, create, update: if isOwner(userId);
+      allow delete: if false;
+    }
+
+    // ZenithMind ingestion (Phase 4): writes to articles, landingPages, leadMagnets, and
+    // zenithIngestions are performed with the Firebase Admin SDK on the server (Vercel/Node).
+    // Those writes bypass client security rules; this file remains deny-by-default for clients.
+
+    // Phase 5 admin UI lists and publish/unpublish/archive mutations also use the Admin SDK
+    // via Next.js API routes (Bearer Firebase ID token + users/{uid}.role check). Client SDK
+    // does not read articles/landingPages/leadMagnets/zenithIngestions in production rules here,
+    // so content collections stay closed to browser reads/writes until a future phase adds
+    // explicit admin claims or server-driven rules.
+
+    // TODO (Phase 4+): articles/{slug}
+    //   - Public read for published content; admin write via claims or server paths.
+    //   - Default deny until ingestion + publishing workflow exists.
+
+    // TODO (Phase 4+): landingPages/{slug}
+    //   - Same pattern as articles; coordinate with RESERVED_TOP_LEVEL_ROUTES and routing.
+
+    // TODO (Phase 4+): leadMagnets/{leadMagnetId}
+    //   - Reusable assets; reads may be public for published magnets; writes admin-only.
+
+    // TODO (Phase 4+): zenithIngestions/{ingestionId}
+    //   - Ingestion audit log; server-only or restricted writes from trusted ZenithMind paths.
+
+    // Phase 9: leads/{leadId} — created and updated only via Next.js POST
+    // /api/landing-pages/opt-in using the Firebase Admin SDK. Public browser clients remain
+    // denied for writes; do not open direct client writes to leads.
+    //
+    // Phase 10: admin lead reads and GHL retry updates run only through Admin SDK API routes
+    // (/api/admin/leads/* with Bearer ID token + admin role). Do not add client read/write rules
+    // for leads; keep this collection closed to the browser SDK.
+
+    // TODO (Phase 4+): submissions/{submissionId}
+    //   - Upload/transcript pipeline; owner-scoped reads/writes when flow is implemented.
+
+    // TODO (Phase 4+): breakdowns/{breakdownId}
+    //   - Analysis outputs; tie to submissions and users; admin review as needed.
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

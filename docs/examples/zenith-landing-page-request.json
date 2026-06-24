@@ -1,0 +1,67 @@
+{
+  "_comment": "Send Authorization: Bearer <ZENITH_INGEST_SECRET> (or x-zenith-secret). Do not put secrets in JSON.",
+  "landingPage": {
+    "id": "sales-call-analysis",
+    "source": "zenithmind",
+    "contentType": "landing_page",
+    "status": "draft",
+    "slug": "sales-call-analysis",
+    "campaignType": "google_ad_grant",
+    "keyword": {
+      "primary": "sales call analysis",
+      "secondary": ["call review", "deal coaching"],
+      "longTail": ["free sales call review checklist"],
+      "adGroups": ["call-analysis-intent"],
+      "searchIntent": "commercial"
+    },
+    "seo": {
+      "metaTitle": "Sales Call Analysis | Sales Breakdown Institute",
+      "metaDescription": "Turn a single recorded call into a structured review: failure moments, corrected moves, and a clear next step—without fluff.",
+      "canonicalPath": "/sales-call-analysis",
+      "noindex": false
+    },
+    "hero": {
+      "eyebrow": "Sherpa offer",
+      "headline": "See where your last sales call actually broke",
+      "subheadline": "A practical read on failure moments, not a generic scorecard—built for reps who want the truth fast.",
+      "primaryCtaLabel": "Get the call autopsy checklist",
+      "primaryCtaHref": "#lead",
+      "secondaryCtaLabel": "Book a review",
+      "secondaryCtaHref": "/contact"
+    },
+    "aeo": {
+      "answerBlock": "Sales call analysis is the process of identifying where persuasion, discovery, or commitment broke down—and naming the corrected move for the next conversation.",
+      "faqs": [
+        {
+          "question": "What do you review first?",
+          "answer": "We start with intent-to-commit signals and where the thread of mutual urgency was lost."
+        }
+      ]
+    },
+    "sections": [
+      {
+        "heading": "What you get",
+        "body": "A structured breakdown of failure moments mapped to buyer psychology—not personality judgments.",
+        "bullets": ["Failure moment labels", "Evidence quotes", "Corrected moves"]
+      }
+    ],
+    "proof": [
+      {
+        "stat": "Most stalled deals",
+        "explanation": "Show early warning signs in the second half of the first serious call.",
+        "sourceLabel": "SBI research memos"
+      }
+    ],
+    "primaryLeadMagnetId": "sales-call-autopsy-checklist",
+    "leadMagnetIds": ["sales-call-autopsy-checklist"],
+    "conversion": {
+      "formType": "lead_magnet",
+      "ghlTags": ["lead_magnet:sales-call-autopsy"],
+      "thankYouMessage": "Check your inbox for the checklist and next steps.",
+      "nextStep": "download"
+    },
+    "relatedArticleSlugs": ["why-prospects-ghost-after-sales-calls"],
+    "relatedLandingPageSlugs": [],
+    "schema": { "type": "WebPage" }
+  }
+}

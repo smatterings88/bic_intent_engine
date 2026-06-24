@@ -1,0 +1,146 @@
+{
+  "_comment": "Send Authorization: Bearer <ZENITH_INGEST_SECRET> (or x-zenith-secret). Do not put secrets in JSON. Order processed: leadMagnets, articles, landingPages.",
+  "leadMagnets": [
+    {
+      "id": "sales-call-autopsy-checklist",
+      "source": "zenithmind",
+      "status": "draft",
+      "title": "Sales Call Autopsy Checklist",
+      "subtitle": "A Sherpa-style one-pager for your next review",
+      "description": "Walk a single call in minutes: capture failure moments, note buyer language, and pick one corrected move before your next touch.",
+      "ctaLabel": "Download the checklist",
+      "deliveryType": "checklist",
+      "ghlTag": "lead_magnet:sales-call-autopsy",
+      "sections": [
+        {
+          "title": "Before you listen",
+          "items": ["Define the decision you were seeking", "Note the promised next step"]
+        }
+      ]
+    }
+  ],
+  "articles": [
+    {
+      "id": "why-prospects-ghost-after-sales-calls",
+      "source": "zenithmind",
+      "contentType": "article",
+      "status": "draft",
+      "slug": "why-prospects-ghost-after-sales-calls",
+      "title": "Why Prospects Ghost After Sales Calls",
+      "subtitle": "Evidence-backed patterns from real deal conversations",
+      "keyword": {
+        "primary": "prospect ghosting after sales call",
+        "secondary": ["deal stall", "follow-up silence", "buyer disengagement"],
+        "longTail": ["why prospects stop responding after discovery call"],
+        "searchIntent": "informational"
+      },
+      "seo": {
+        "metaTitle": "Why Prospects Ghost After Sales Calls | Sales Breakdown Institute",
+        "metaDescription": "Research-backed look at where momentum dies after sales calls—and how teams misread silence as interest instead of risk.",
+        "canonicalPath": "/articles/why-prospects-ghost-after-sales-calls",
+        "noindex": false
+      },
+      "aeo": {
+        "answerBlock": "Prospects ghost when the next step is unclear, urgency is manufactured instead of mutual, or the buyer does not see a concrete reason to re-engage before your follow-up.",
+        "faqs": [
+          {
+            "question": "What is the most common early signal of ghosting?",
+            "answer": "Slow or single-word replies after a strong live call, especially when scheduling slips without a replacement time."
+          }
+        ]
+      },
+      "article": {
+        "intro": "Ghosting is rarely random. It is usually the visible outcome of a breakdown that already happened in the conversation.",
+        "sections": [
+          {
+            "heading": "The credibility gap",
+            "body": "When claims outpace proof, buyers go quiet rather than argue. Silence becomes the safest move."
+          },
+          {
+            "heading": "The next-step vacuum",
+            "body": "If the path forward is fuzzy, your follow-up feels like pressure instead of progress."
+          }
+        ],
+        "conclusion": "Treat silence as a diagnostic signal. The goal is not more touches—it is a clearer reason to return."
+      },
+      "internalLinking": {
+        "primaryCluster": "deal-breakdown-research",
+        "relatedClusters": ["aeo-sales-content", "pipeline-risk"],
+        "requiredLinks": [],
+        "excludedLinks": [],
+        "rotationStrategy": "mixed",
+        "maxLinks": 6
+      },
+      "relatedLandingPageSlug": "sales-call-analysis",
+      "leadMagnetId": "sales-call-autopsy-checklist",
+      "relatedArticleSlugs": ["where-deals-break-early-signals"],
+      "schema": { "type": "Article" }
+    }
+  ],
+  "landingPages": [
+    {
+      "id": "sales-call-analysis",
+      "source": "zenithmind",
+      "contentType": "landing_page",
+      "status": "draft",
+      "slug": "sales-call-analysis",
+      "campaignType": "google_ad_grant",
+      "keyword": {
+        "primary": "sales call analysis",
+        "secondary": ["call review", "deal coaching"],
+        "longTail": ["free sales call review checklist"],
+        "adGroups": ["call-analysis-intent"],
+        "searchIntent": "commercial"
+      },
+      "seo": {
+        "metaTitle": "Sales Call Analysis | Sales Breakdown Institute",
+        "metaDescription": "Turn a single recorded call into a structured review: failure moments, corrected moves, and a clear next step—without fluff.",
+        "canonicalPath": "/sales-call-analysis",
+        "noindex": false
+      },
+      "hero": {
+        "eyebrow": "Sherpa offer",
+        "headline": "See where your last sales call actually broke",
+        "subheadline": "A practical read on failure moments, not a generic scorecard—built for reps who want the truth fast.",
+        "primaryCtaLabel": "Get the call autopsy checklist",
+        "primaryCtaHref": "#lead",
+        "secondaryCtaLabel": "Book a review",
+        "secondaryCtaHref": "/contact"
+      },
+      "aeo": {
+        "answerBlock": "Sales call analysis is the process of identifying where persuasion, discovery, or commitment broke down—and naming the corrected move for the next conversation.",
+        "faqs": [
+          {
+            "question": "What do you review first?",
+            "answer": "We start with intent-to-commit signals and where the thread of mutual urgency was lost."
+          }
+        ]
+      },
+      "sections": [
+        {
+          "heading": "What you get",
+          "body": "A structured breakdown of failure moments mapped to buyer psychology—not personality judgments.",
+          "bullets": ["Failure moment labels", "Evidence quotes", "Corrected moves"]
+        }
+      ],
+      "proof": [
+        {
+          "stat": "Most stalled deals",
+          "explanation": "Show early warning signs in the second half of the first serious call.",
+          "sourceLabel": "SBI research memos"
+        }
+      ],
+      "primaryLeadMagnetId": "sales-call-autopsy-checklist",
+      "leadMagnetIds": ["sales-call-autopsy-checklist"],
+      "conversion": {
+        "formType": "lead_magnet",
+        "ghlTags": ["lead_magnet:sales-call-autopsy"],
+        "thankYouMessage": "Check your inbox for the checklist and next steps.",
+        "nextStep": "download"
+      },
+      "relatedArticleSlugs": ["why-prospects-ghost-after-sales-calls"],
+      "relatedLandingPageSlugs": [],
+      "schema": { "type": "WebPage" }
+    }
+  ]
+}

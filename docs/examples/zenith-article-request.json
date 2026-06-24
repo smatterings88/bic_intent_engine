@@ -1,0 +1,59 @@
+{
+  "_comment": "Send Authorization: Bearer <ZENITH_INGEST_SECRET> (or x-zenith-secret). Do not put secrets in JSON.",
+  "article": {
+    "id": "why-prospects-ghost-after-sales-calls",
+    "source": "zenithmind",
+    "contentType": "article",
+    "status": "draft",
+    "slug": "why-prospects-ghost-after-sales-calls",
+    "title": "Why Prospects Ghost After Sales Calls",
+    "subtitle": "Evidence-backed patterns from real deal conversations",
+    "keyword": {
+      "primary": "prospect ghosting after sales call",
+      "secondary": ["deal stall", "follow-up silence", "buyer disengagement"],
+      "longTail": ["why prospects stop responding after discovery call"],
+      "searchIntent": "informational"
+    },
+    "seo": {
+      "metaTitle": "Why Prospects Ghost After Sales Calls | Sales Breakdown Institute",
+      "metaDescription": "Research-backed look at where momentum dies after sales calls—and how teams misread silence as interest instead of risk.",
+      "canonicalPath": "/articles/why-prospects-ghost-after-sales-calls",
+      "noindex": false
+    },
+    "aeo": {
+      "answerBlock": "Prospects ghost when the next step is unclear, urgency is manufactured instead of mutual, or the buyer does not see a concrete reason to re-engage before your follow-up.",
+      "faqs": [
+        {
+          "question": "What is the most common early signal of ghosting?",
+          "answer": "Slow or single-word replies after a strong live call, especially when scheduling slips without a replacement time."
+        }
+      ]
+    },
+    "article": {
+      "intro": "Ghosting is rarely random. It is usually the visible outcome of a breakdown that already happened in the conversation.",
+      "sections": [
+        {
+          "heading": "The credibility gap",
+          "body": "When claims outpace proof, buyers go quiet rather than argue. Silence becomes the safest move."
+        },
+        {
+          "heading": "The next-step vacuum",
+          "body": "If the path forward is fuzzy, your follow-up feels like pressure instead of progress."
+        }
+      ],
+      "conclusion": "Treat silence as a diagnostic signal. The goal is not more touches—it is a clearer reason to return."
+    },
+    "internalLinking": {
+      "primaryCluster": "deal-breakdown-research",
+      "relatedClusters": ["aeo-sales-content", "pipeline-risk"],
+      "requiredLinks": [],
+      "excludedLinks": [],
+      "rotationStrategy": "mixed",
+      "maxLinks": 6
+    },
+    "relatedLandingPageSlug": "sales-call-analysis",
+    "leadMagnetId": "sales-call-autopsy-checklist",
+    "relatedArticleSlugs": ["where-deals-break-early-signals"],
+    "schema": { "type": "Article" }
+  }
+}

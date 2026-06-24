@@ -1,0 +1,23 @@
+rules_version = '2';
+
+service firebase.storage {
+  match /b/{bucket}/o {
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isSignedIn() && request.auth.uid == userId;
+    }
+
+    match /userUploads/{userId}/{allPaths=**} {
+      allow read, write: if isOwner(userId);
+    }
+
+    // TODO: transcript uploads, shared assets, admin-only paths (future phases)
+
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+}

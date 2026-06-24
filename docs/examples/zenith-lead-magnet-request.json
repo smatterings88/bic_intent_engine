@@ -1,0 +1,20 @@
+{
+  "_comment": "Send Authorization: Bearer <ZENITH_INGEST_SECRET> (or x-zenith-secret). Do not put secrets in JSON.",
+  "leadMagnet": {
+    "id": "sales-call-autopsy-checklist",
+    "source": "zenithmind",
+    "status": "draft",
+    "title": "Sales Call Autopsy Checklist",
+    "subtitle": "A Sherpa-style one-pager for your next review",
+    "description": "Walk a single call in minutes: capture failure moments, note buyer language, and pick one corrected move before your next touch.",
+    "ctaLabel": "Download the checklist",
+    "deliveryType": "checklist",
+    "ghlTag": "lead_magnet:sales-call-autopsy",
+    "sections": [
+      {
+        "title": "Before you listen",
+        "items": ["Define the decision you were seeking", "Note the promised next step"]
+      }
+    ]
+  }
+}

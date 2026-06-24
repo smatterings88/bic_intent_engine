@@ -1,0 +1,287 @@
+{
+  "_comment": "LP1 forensic landing page (Zenith Content v1.2). POST to /api/zenith/content with Bearer ZENITH_CONTENT_SECRET.",
+  "id": "why-good-calls-dont-close",
+  "source": "zenithmind",
+  "contentType": "landing_page",
+  "status": "draft",
+  "slug": "why-good-calls-dont-close",
+  "title": "The Call Felt Fine. The Buyer Mentally Left 20 Minutes Earlier.",
+  "seo": {
+    "metaTitle": "Why Good Calls Don't Close | Sales Breakdown Institute",
+    "metaDescription": "Forensic analysis of recorded sales calls: where buyers quietly disengage, drift markers, and the exact moment deals die before the call ends."
+  },
+  "ogImage": {
+    "template": "forensic-article",
+    "headline": "The Call Felt Fine",
+    "subhead": "Forensic sales call analysis"
+  },
+  "leadMagnetId": "the-call-felt-fine",
+  "components": [
+    {
+      "type": "page-hero",
+      "variant": "forensic-navy",
+      "eyebrow": "Forensic analysis of recorded sales calls",
+      "headline": "The call felt fine. The buyer mentally left 20 minutes earlier.",
+      "headlineHighlight": "The buyer mentally left 20 minutes earlier.",
+      "subheadline": "Most lost deals don't end with rejection. They end with fake agreement — and the recording shows exactly when.",
+      "bullets": [
+        "See where buyers quietly disengage — before they say a word",
+        "Catch the exact moment trust drops (it's never when you think)",
+        "Why your best calls are still ending in ghosting",
+        "Spot the invisible pipeline leaks draining your revenue right now"
+      ],
+      "microcopy": "11-page forensic evidence file · Used by closers, founders, and sales teams losing deals after calls that felt fine.",
+      "primaryCta": {
+        "label": "See What The Recording Captured →",
+        "destination": "lead-magnet:the-call-felt-fine"
+      },
+      "microProof": {
+        "buyerLabel": "BUYER",
+        "buyerLine": "\"Send it over. We're pretty interested.\"",
+        "analysisLabel": "SBI ANALYSIS",
+        "analysisLine": "Evaluation ended 22 minutes earlier."
+      },
+      "forensicArtifact": {
+        "caseId": "Case File #0047",
+        "status": "Forensic Complete",
+        "driftPositionPercent": 54,
+        "driftLabel": "DRIFT DETECTED",
+        "timestamps": ["00:00", "19:08", "41:22"],
+        "waveform": [
+          { "tone": "green", "height": 45 },
+          { "tone": "green", "height": 62 },
+          { "tone": "green", "height": 55 },
+          { "tone": "amber", "height": 48 },
+          { "tone": "amber", "height": 40 },
+          { "tone": "red", "height": 35 },
+          { "tone": "deepRed", "height": 28 }
+        ],
+        "exchanges": [
+          {
+            "timestamp": "14:22",
+            "speaker": "BUYER",
+            "line": "Yeah — we're trying to get something in place before Q3. Board meeting, real urgency.",
+            "marker": "Engaged",
+            "markerTone": "green"
+          },
+          {
+            "timestamp": "19:08",
+            "speaker": "BUYER",
+            "line": "Yeah… it's a little higher than we'd budgeted for.",
+            "highlight": "a little higher",
+            "marker": "drift",
+            "annotation": "Response dropped from 28 words → 12. Hesitation trail begins here."
+          },
+          {
+            "timestamp": "22:41",
+            "speaker": "BUYER",
+            "line": "Maybe. I'd have to check.",
+            "marker": "collapse",
+            "annotation": "6 words. Authority collapse confirmed."
+          },
+          {
+            "timestamp": "26:51",
+            "speaker": "BUYER",
+            "line": "Send it over. We're pretty interested.",
+            "highlight": "pretty interested",
+            "marker": "exit",
+            "annotation": "Exit phrase delivered as progress. Ghost composing."
+          }
+        ],
+        "verdictLabel": "Sherpa Verdict",
+        "verdict": "Deal gone at 19:08. Salesperson kept selling for 22 more minutes.",
+        "footer": "Free Forensic Analysis · SalesBreakdownInstitute.com"
+      }
+    },
+    {
+      "type": "aeo-answer-block",
+      "answer": "A good sales call can feel productive while the buyer has already mentally exited. Forensic call analysis identifies drift, hesitation trails, and fake agreement from the recording — not from CRM stage or rep intuition."
+    },
+    {
+      "type": "body-section",
+      "variant": "stat-callout",
+      "kicker": "Revenue Leakage Detection",
+      "heading": "This isn't a coaching problem. It's a revenue leak.",
+      "body": "If two deals per month die from invisible conversational drift — not bad fit, not price objections, but drift you never detected — here's the number.",
+      "stat": {
+        "premise": "One invisible conversational leak. Two deals a month.",
+        "number": "$600K",
+        "consequence": "in pipeline that never existed."
+      }
+    },
+    {
+      "type": "body-section",
+      "variant": "story-file",
+      "fileLabel": "Case File · High-Ticket Discovery Call · B2B SaaS",
+      "fileBadge": "Authority Collapse Identified",
+      "paragraphs": [
+        "The founder thought the call went well.",
+        "The buyer nodded. Asked questions. Sounded invested. He logged off and updated his CRM to 80% probability.",
+        "Sherpa flagged the exact moment authority collapsed: minute 14:33 — when a mild pricing question triggered overexplaining.",
+        "The buyer mentally exited the deal 22 minutes before the call ended."
+      ],
+      "verdictRows": [
+        { "label": "Drift detected at", "value": "14:33 — overexplanation after mild objection" },
+        { "label": "Deal gone at", "value": "minute 14:33 — 22 min before call ended" },
+        { "label": "Pattern", "value": "Authority Collapse → Hesitation Trail → Fake Agreement" }
+      ]
+    },
+    {
+      "type": "inline-cta",
+      "variant": "urgency",
+      "headline": "The recording already has the answer.",
+      "subtext": "Download the 11-page forensic evidence file before your next follow-up goes to someone who already decided.",
+      "cta": { "label": "Get the evidence file →", "destination": "lead-magnet:the-call-felt-fine" }
+    },
+    {
+      "type": "credibility-bar",
+      "variant": "forensic",
+      "text": "Sales Breakdown Institute is a nonprofit research organization analyzing conversational drift in recorded B2B sales calls.",
+      "emphasis": ["nonprofit research organization", "conversational drift"]
+    },
+    {
+      "type": "moment-list",
+      "variant": "forensic-moments",
+      "kicker": "Four moments",
+      "heading": "Where the deal actually changed",
+      "subheading": "Most reps never see these on replay. The transcript marks all four.",
+      "moments": [
+        {
+          "number": "01",
+          "timestamp": "14:22",
+          "title": "Genuine urgency — still evaluating",
+          "description": "Buyer offers timeline and board pressure. Full sentences. Forward energy.",
+          "snippet": "We're trying to get something in place before Q3.",
+          "signal": "Engaged · evaluating"
+        },
+        {
+          "number": "02",
+          "timestamp": "19:08",
+          "title": "Tone shift — hesitation trail opens",
+          "description": "Response contracts. Elongated yeah. First pause before answering.",
+          "snippet": "Yeah… it's a little higher than we'd budgeted for.",
+          "signal": "Drift detected"
+        },
+        {
+          "number": "03",
+          "timestamp": "22:41",
+          "title": "Authority collapse",
+          "description": "Six words. Buyer shifted from evaluating to enduring.",
+          "snippet": "Maybe. I'd have to check.",
+          "signal": "Collapse · deal gone"
+        },
+        {
+          "number": "04",
+          "timestamp": "26:51",
+          "title": "Fake agreement",
+          "description": "Exit phrase delivered as progress. Ghost already composing.",
+          "snippet": "Send it over. We're pretty interested.",
+          "signal": "Exit · fake certainty"
+        }
+      ]
+    },
+    {
+      "type": "transcript-block",
+      "variant": "case-file",
+      "caseLabel": "Case File · B2B Discovery Call · 41:22",
+      "verdictBadge": "Deal Gone Before Call Ended",
+      "exchanges": [
+        {
+          "timestamp": "19:08",
+          "salesperson": "Does the pricing feel in range?",
+          "buyer": "Yeah… it's a little higher than we'd budgeted for.",
+          "marker": {
+            "type": "drift",
+            "label": "TONE SHIFTS HERE",
+            "note": "The salesperson heard a budget objection. The recording shows a psychological exit."
+          }
+        }
+      ],
+      "summary": [
+        { "label": "Deal lost at", "value": "Minute 22:41", "highlight": true },
+        { "label": "Call ended at", "value": "Minute 41:22" },
+        { "label": "Selling after deal died", "value": "18 minutes, 41 seconds", "highlight": true }
+      ],
+      "attribution": "Composite example — patterns from recorded B2B conversations. Anonymized."
+    },
+    {
+      "type": "signal-breakdown",
+      "variant": "evidence-cards",
+      "heading": "What the recording captured",
+      "subheading": "Seven signals reps routinely miss",
+      "signals": [
+        { "number": "01", "label": "Curious → Polite Shift", "description": "Interest becomes managed courtesy" },
+        { "number": "02", "label": "Social Continuation", "description": "Tone advances; decision-making does not" },
+        { "number": "03", "label": "Ghost Trail", "description": "Withdrawal before the exit phrase" }
+      ]
+    },
+    {
+      "type": "why-miss-section",
+      "variant": "forensic",
+      "kicker": "Why reps miss it",
+      "heading": "The call felt fine because nothing sounded wrong",
+      "blocks": [
+        {
+          "number": "1",
+          "title": "CRM updates on tone, not trajectory",
+          "body": "Nods and questions read as progress. The buyer's word count and pause length told a different story."
+        },
+        {
+          "number": "2",
+          "title": "Objections get coached, not forensically read",
+          "body": "Budget pushback at 19:08 was the start of drift — not a pricing problem to solve with more talking."
+        }
+      ],
+      "closing": "The moment is in the transcript. Most salespeople never find it without a forensic read."
+    },
+    {
+      "type": "faq-section",
+      "faqs": [
+        {
+          "question": "What is forensic sales call analysis?",
+          "answer": "Structured review of recorded calls for drift, hesitation trails, and exit phrases — not generic scoring or talk ratios alone."
+        },
+        {
+          "question": "Do I need Gong or Fathom?",
+          "answer": "A transcript or recording link is enough. We accept exports from common recording tools."
+        }
+      ]
+    },
+    {
+      "type": "forensic-download-section",
+      "variant": "evidence-file",
+      "id": "lead",
+      "kicker": "Evidence file",
+      "heading": "Download the 11-page forensic breakdown",
+      "paragraphs": [
+        "Walkthrough of drift, collapse, and fake agreement — with annotated transcript excerpts.",
+        "Built for reps who lost deals after calls that felt fine."
+      ],
+      "tension": "Your next follow-up may already be too late.",
+      "legalNote": "Educational research material. Not legal or financial advice.",
+      "card": {
+        "eyebrow": "Free download",
+        "title": "The Call Felt Fine",
+        "subtitle": "11-page forensic evidence file",
+        "previewTitle": "CASE FILE #0047",
+        "previewDetail": "Drift · Collapse · Fake Agreement",
+        "caseLabel": "Delivered to your inbox · PDF",
+        "nextStep": "Check spam if you don't see it within 2 minutes.",
+        "privacy": "We don't sell your email. Unsubscribe anytime."
+      },
+      "form": {
+        "destination": "lead-magnet:the-call-felt-fine",
+        "ctaText": "Send Me The Evidence File →",
+        "fields": ["name", "email"],
+        "variant": "lead-magnet-capture"
+      }
+    },
+    {
+      "type": "footer-cta",
+      "variant": "forensic-final",
+      "headline": "Stop sending follow-ups to buyers who already decided.",
+      "body": "Get the forensic evidence file. Find the minute the deal actually changed.",
+      "cta": { "label": "Download the evidence file →", "destination": "lead-magnet:the-call-felt-fine" }
+    }
+  ]
+}

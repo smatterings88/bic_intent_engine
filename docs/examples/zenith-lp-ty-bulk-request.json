@@ -1,0 +1,69 @@
+{
+  "_comment": "Submit LP + TY together: POST /api/zenith/content/bulk. thankYouPageUrl is auto-set on the LP from the TY page title.",
+  "pages": [
+    {
+      "source": "zenithmind",
+      "contentType": "landing_page",
+      "slug": "why-good-calls-dont-close",
+      "title": "The Call Felt Fine",
+      "leadMagnetId": "the-call-felt-fine",
+      "seo": {
+        "metaTitle": "Why Good Calls Don't Close",
+        "metaDescription": "Forensic analysis of recorded sales calls."
+      },
+      "ogImage": { "template": "forensic-article", "headline": "The Call Felt Fine" },
+      "components": [
+        {
+          "type": "page-hero",
+          "headline": "The call felt fine.",
+          "primaryCta": {
+            "label": "Get the evidence file",
+            "destination": "lead-magnet:the-call-felt-fine"
+          }
+        },
+        { "type": "aeo-answer-block", "answer": "A good sales call can feel productive while the buyer has already mentally exited." },
+        { "type": "body-section", "heading": "Why this matters", "body": "Invisible drift ends deals before the call ends." },
+        {
+          "type": "lead-form",
+          "variant": "lead-magnet-capture",
+          "destination": "lead-magnet:the-call-felt-fine",
+          "ctaText": "Send me the file"
+        },
+        {
+          "type": "faq-section",
+          "faqs": [{ "question": "What is forensic analysis?", "answer": "Structured review of recorded calls for drift and exit phrases." }]
+        },
+        {
+          "type": "footer-cta",
+          "headline": "Get the evidence file",
+          "cta": { "label": "Download", "destination": "lead-magnet:the-call-felt-fine" }
+        }
+      ]
+    },
+    {
+      "source": "zenithmind",
+      "contentType": "cta_page",
+      "slug": "thank-you-the-call-felt-fine",
+      "title": "Thank You — The Call Felt Fine",
+      "seo": {
+        "metaTitle": "Thank You | The Call Felt Fine",
+        "metaDescription": "Your forensic evidence file is on the way."
+      },
+      "ogImage": { "template": "cta-upload", "headline": "Thank You" },
+      "components": [
+        {
+          "type": "page-hero",
+          "variant": "tool-strip",
+          "headline": "Check your inbox",
+          "subheadline": "Your 11-page forensic evidence file is on the way."
+        },
+        {
+          "type": "body-section",
+          "variant": "sherpa-bridge",
+          "heading": "What happens next",
+          "body": "Review the file, then upload a call if you want a Sherpa read."
+        }
+      ]
+    }
+  ]
+}

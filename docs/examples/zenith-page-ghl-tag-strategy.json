@@ -1,0 +1,36 @@
+{
+  "_comment": "Example Zenith Content v1.2 page with page-level and component-level ghlTagStrategy. POST to /api/zenith/content with Bearer ZENITH_CONTENT_SECRET.",
+  "id": "example-custom-tags",
+  "source": "zenithmind",
+  "contentType": "lead_magnet_page",
+  "slug": "example-custom-tags",
+  "title": "Example — GHL tag strategy",
+  "seo": {
+    "metaTitle": "Example | Sales Breakdown Institute",
+    "metaDescription": "Demonstrates merge, replace, and suppress for GoHighLevel tags."
+  },
+  "ogImage": {
+    "template": "lead-magnet",
+    "headline": "GHL Tag Strategy Example"
+  },
+  "ghlTagStrategy": {
+    "mode": "merge",
+    "tags": ["sbi --> zenith campaign"]
+  },
+  "components": [
+    {
+      "type": "page-hero",
+      "headline": "Download the guide",
+      "primaryCta": { "label": "Get it", "destination": "lead-magnet:example-id" }
+    },
+    {
+      "type": "lead-form",
+      "variant": "lead-magnet-capture",
+      "destination": "lead-magnet:example-id",
+      "ghlTagStrategy": {
+        "mode": "replace",
+        "tags": ["lead_magnet:example-id", "sbi --> custom replace only"]
+      }
+    }
+  ]
+}

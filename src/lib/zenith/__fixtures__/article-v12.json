@@ -1,0 +1,107 @@
+{
+  "id": "why-deals-stall-after-the-demo",
+  "source": "zenithmind",
+  "contentType": "article",
+  "status": "draft",
+  "slug": "why-deals-stall-after-the-demo",
+  "title": "Why Deals Stall After the Demo",
+  "seo": {
+    "metaTitle": "Why Deals Stall After the Demo | Sales Breakdown Institute",
+    "metaDescription": "The demo went great. Then silence. The recording shows exactly when the deal stopped moving.",
+    "canonicalPath": "/articles/why-deals-stall-after-the-demo",
+    "noindex": false,
+    "ogTitle": "Why Deals Stall After the Demo",
+    "ogDescription": "The deal died before you logged off. The recording shows exactly where."
+  },
+  "ogImage": {
+    "template": "forensic-article",
+    "headline": "Why Deals Stall After the Demo",
+    "subhead": "The deal died before you logged off.",
+    "signal": "Shift detected at 31:14"
+  },
+  "leadMagnetId": "7-hidden-moments",
+  "relatedArticleSlugs": ["why-prospects-ghost-after-sales-calls"],
+  "schema": { "type": "Article" },
+  "components": [
+    {
+      "type": "aeo-answer-block",
+      "answer": "Deals stall after the demo because the rep handed a decision to a champion who was not equipped to survive the internal conversation. The moment the call ended, that champion walked into a room full of stakeholders they were never prepared to face."
+    },
+    {
+      "type": "body-section",
+      "heading": "The Champion Walked Into a Room You Were Never In",
+      "body": "The rep left the call feeling good. The champion left the call holding something they were not equipped to carry.",
+      "bullets": [],
+      "emphasis": null
+    },
+    {
+      "type": "inline-cta",
+      "variant": "urgency",
+      "headline": "Want to see exactly where your deal left the room?",
+      "subtext": "Most reps never find out. The recording knows.",
+      "cta": { "label": "Upload Your Call", "destination": "call-upload" }
+    },
+    {
+      "type": "transcript-block",
+      "timestamp": "31:14",
+      "attribution": "Reconstructed from behavioral signals observed across recorded B2B sales conversations. All details anonymized.",
+      "exchanges": [
+        {
+          "speaker": "Rep",
+          "line": "So does this solve for the use case you mentioned last week with the ops team?"
+        },
+        {
+          "speaker": "Prospect",
+          "line": "Yeah, yeah, I think so. I mean — we'd have to look at how it integrates. But yeah, this is great."
+        }
+      ],
+      "signals": [
+        {
+          "label": "Language specificity collapse",
+          "description": "The prospect went from detailed operational language to vague generalities."
+        },
+        {
+          "label": "Topic deflection",
+          "description": "When asked directly about internal criteria, the prospect redirected."
+        },
+        {
+          "label": "Response latency and filler spike",
+          "description": "The double-confirm followed by a hedge is a measurable verbal pattern."
+        }
+      ],
+      "verdict": "deal-shifted"
+    },
+    {
+      "type": "inline-cta",
+      "variant": "outcome",
+      "headline": "Every demo has its moment. Most reps never find it.",
+      "cta": { "label": "Find My Moment", "destination": "call-upload" }
+    },
+    {
+      "type": "faq-section",
+      "faqs": [
+        {
+          "question": "Why do prospects go quiet after a demo?",
+          "answer": "They usually go quiet because the internal decision conversation became harder than the call made it seem."
+        },
+        {
+          "question": "Can a recording show where a deal stalled?",
+          "answer": "Yes. The recording often shows the moment language cooled, specificity collapsed, or the prospect stopped committing to concrete next steps."
+        }
+      ]
+    },
+    {
+      "type": "inline-cta",
+      "variant": "full-block",
+      "headline": "What the Recording Shows",
+      "body": "Upload your demo call. We analyze the moment the energy shifted — the questions that stopped, the pauses that stretched, the language that cooled.",
+      "cta": { "label": "See What The Recording Shows", "destination": "call-upload" }
+    },
+    {
+      "type": "footer-cta",
+      "headline": "What the Recording Shows",
+      "body": "Upload your call. We analyze the moment the energy shifted — the questions that stopped, the pauses that stretched, the language that cooled.",
+      "cta": { "label": "See What The Recording Shows", "destination": "call-upload" }
+    }
+  ]
+}
