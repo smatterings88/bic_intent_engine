@@ -110,17 +110,6 @@ export function Header() {
                     </li>
                   );
                 })}
-                <li className="md:ml-1">
-                  <Link
-                    href="/donate"
-                    className={
-                      "block rounded-full bg-primary px-5 py-2.5 text-center text-sm font-semibold text-white transition-colors duration-150 hover:bg-[var(--bic-accent-lt)] hover:text-white md:inline-block " +
-                      (pathname === "/donate" ? "ring-2 ring-primary/30" : "")
-                    }
-                  >
-                    Donate
-                  </Link>
-                </li>
               </ul>
             </nav>
           </div>
