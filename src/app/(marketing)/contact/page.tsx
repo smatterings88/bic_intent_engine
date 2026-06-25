@@ -26,9 +26,18 @@ export default function ContactPage() {
         </div>
         <aside className="space-y-8 text-sm">
           <div>
-            <div className="eyebrow mb-2">Email</div>
+            <div className="eyebrow mb-2">General inquiries</div>
             <a href={`mailto:${email}`} className="text-foreground hover:text-primary">
               {email}
+            </a>
+          </div>
+          <div>
+            <div className="eyebrow mb-2">Support</div>
+            <a
+              href={`mailto:${siteConfig.supportEmail}`}
+              className="text-foreground hover:text-primary"
+            >
+              {siteConfig.supportEmail}
             </a>
           </div>
           <div>

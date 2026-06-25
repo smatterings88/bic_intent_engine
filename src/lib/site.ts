@@ -8,6 +8,7 @@ export const siteConfig = {
   tagline: "Communicate Clearly. Build Something That Matters.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://businessimpactcanada.com",
   email: "businessimpactcanada@gmail.com",
+  supportEmail: "support@businessimpactcanada.com",
   address: {
     line1: "1771 Robson Street",
     city: "Vancouver",
