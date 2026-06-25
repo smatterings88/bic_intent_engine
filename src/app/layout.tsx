@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { DM_Sans, DM_Serif_Display } from "next/font/google";
 import { siteConfig } from "@/lib/site";
 
-import { AppProviders } from "@/app/providers";
 import {
   GoogleTagManagerBody,
   GoogleTagManagerHead,
@@ -63,7 +62,7 @@ export default function RootLayout({
       </head>
       <body>
         <GoogleTagManagerBody />
-        <AppProviders>{children}</AppProviders>
+        {children}
       </body>
     </html>
   );

@@ -10,9 +10,13 @@ export async function resolveHideGlobalFooterForPathname(pathname: string): Prom
   if (!slug) {
     return false;
   }
-  const page = await getPublishedZenithPageBySlug(slug);
-  if (!page) {
+  try {
+    const page = await getPublishedZenithPageBySlug(slug);
+    if (!page) {
+      return false;
+    }
+    return shouldHideGlobalSiteFooter(page);
+  } catch {
     return false;
   }
-  return shouldHideGlobalSiteFooter(page);
 }

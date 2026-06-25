@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+
+import { AppProviders } from "@/app/providers";
 import { AppShell } from "@/components/app/AppShell";
 
 export const metadata: Metadata = {
@@ -12,5 +14,9 @@ export default function AppSegmentLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return <AppShell>{children}</AppShell>;
+  return (
+    <AppProviders>
+      <AppShell>{children}</AppShell>
+    </AppProviders>
+  );
 }

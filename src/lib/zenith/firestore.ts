@@ -16,6 +16,14 @@ function serializeZenithPage(data: Record<string, unknown>): ZenithPage {
   return deepSerializeFirestore(data) as unknown as ZenithPage;
 }
 
+function tryAdminDb() {
+  try {
+    return ensureFirebaseAdmin().adminDb;
+  } catch {
+    return null;
+  }
+}
+
 export async function saveZenithDraftPage(
   page: ZenithPage,
   options?: { submittedBy?: string },
@@ -55,7 +63,8 @@ export async function saveZenithDraftPage(
 
 export async function getZenithPageBySlug(slug: string): Promise<ZenithPage | null> {
   if (!isValidSlug(slug)) return null;
-  const { adminDb } = ensureFirebaseAdmin();
+  const adminDb = tryAdminDb();
+  if (!adminDb) return null;
   const snap = await adminDb.collection(CONTENT_COLLECTIONS.zenithPages).doc(slug).get();
   if (!snap.exists) return null;
   return serializeZenithPage({ ...(snap.data() as Record<string, unknown>), slug });
@@ -74,7 +83,10 @@ export async function listZenithPages(filters?: {
   limit?: number;
   cursor?: string;
 }): Promise<{ pages: ZenithPage[]; nextCursor?: string }> {
-  const { adminDb } = ensureFirebaseAdmin();
+  const adminDb = tryAdminDb();
+  if (!adminDb) {
+    return { pages: [] };
+  }
   const limit = Math.min(Math.max(1, filters?.limit ?? 30), 100);
   const col = adminDb.collection(CONTENT_COLLECTIONS.zenithPages);
   let snap;
