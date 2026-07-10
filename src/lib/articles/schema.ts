@@ -1,5 +1,7 @@
 import { absoluteUrl } from "@/lib/build-metadata";
+import { toIsoDateOnly } from "@/lib/content/format-publish-date";
 import { siteConfig } from "@/lib/site";
+import { getSiteGuideBySlug } from "@/lib/site-guides";
 import type { Article } from "@/types/article";
 
 function articlePageUrl(article: Article): string {
@@ -10,7 +12,24 @@ function articlePageUrl(article: Article): string {
 }
 
 function iso(value: unknown): string | undefined {
+  const parsed = toIsoDateOnly(value);
+  if (parsed) return parsed;
   return typeof value === "string" ? value : undefined;
+}
+
+function resolveArticleDates(article: Article): { datePublished?: string; dateModified?: string } {
+  const pub = iso(article.publishedAt);
+  const mod = iso(article.updatedAt);
+  if (pub) {
+    return { datePublished: pub, dateModified: mod ?? pub };
+  }
+  const guide = getSiteGuideBySlug(article.slug);
+  if (guide) {
+    const guidePub = toIsoDateOnly(guide.publishedAt);
+    const guideMod = guide.updatedAt ? toIsoDateOnly(guide.updatedAt) : guidePub;
+    return guidePub ? { datePublished: guidePub, dateModified: guideMod ?? guidePub } : {};
+  }
+  return {};
 }
 
 export function buildArticleJsonLd(article: Article): Record<string, unknown> {
@@ -32,11 +51,12 @@ export function buildArticleJsonLd(article: Article): Record<string, unknown> {
       "@id": url,
     },
     publisher,
+    author: {
+      "@type": "Organization",
+      name: siteConfig.name,
+    },
+    ...resolveArticleDates(article),
   };
-  const pub = iso(article.publishedAt);
-  const mod = iso(article.updatedAt);
-  if (pub) out.datePublished = pub;
-  if (mod) out.dateModified = mod;
   return out;
 }
 

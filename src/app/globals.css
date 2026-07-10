@@ -472,71 +472,7 @@
     @apply mx-auto mb-7 max-w-[500px] text-base leading-relaxed text-white/70;
   }
 
-  /* ── Donate page ── */
-  .donate-grid {
-    @apply grid gap-10 py-14 lg:grid-cols-2;
-  }
-
-  .donate-card {
-    @apply rounded-lg border border-border bg-white p-8 sm:p-9;
-  }
-
-  .donate-card-eyebrow {
-    @apply mb-2.5 text-[11px] font-semibold uppercase tracking-widest text-primary;
-  }
-
-  .donate-card h2 {
-    @apply mb-3 font-serif text-[clamp(1.125rem,2.5vw,1.5rem)] font-normal tracking-tight text-foreground;
-  }
-
-  .donate-card p {
-    @apply mb-5 text-sm leading-relaxed text-muted-foreground;
-  }
-
-  .amounts {
-    @apply mb-7 flex flex-wrap gap-2.5;
-  }
-
-  .amount-label {
-    @apply rounded-lg border border-border bg-secondary px-4 py-2.5 text-sm font-semibold text-bic-ink-soft;
-  }
-
-  .amount-label.featured {
-    @apply border-primary text-primary;
-  }
-
-  .donate-btn {
-    @apply mb-3.5 block w-full rounded-full bg-primary px-6 py-4 text-center text-[15px] font-semibold text-white transition-colors duration-200 hover:bg-[var(--bic-accent-lt)] hover:text-white;
-  }
-
-  .secure-note {
-    @apply mt-4 text-center text-xs leading-relaxed text-muted-foreground;
-  }
-
-  .impact-list {
-    @apply mb-5 list-none p-0;
-  }
-
-  .impact-list li {
-    @apply flex items-start gap-2.5 border-b border-border py-2.5 text-sm leading-snug text-bic-ink-soft;
-  }
-
-  .impact-list li:last-child {
-    @apply border-b-0;
-  }
-
-  .impact-list li::before {
-    content: "✓";
-    @apply mt-px shrink-0 font-bold text-bic-sage;
-  }
-
-  .tax-note {
-    @apply mt-6 rounded-r-lg border-l-[3px] border-bic-sage bg-secondary px-5 py-4 text-[13px] leading-relaxed text-bic-ink-soft;
-  }
-
-  .tax-note strong {
-    @apply mb-1 block font-semibold text-foreground;
-  }
+  /* ── Partner feature (resources) ── */
 
   /* ── Site footer ── */
   .site-footer {

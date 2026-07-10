@@ -1,4 +1,6 @@
 import { siteConfig } from "@/lib/site";
+import { toIsoDateOnly } from "@/lib/content/format-publish-date";
+import { getSiteGuideBySlug } from "@/lib/site-guides";
 import { getOgImageUrlForPage } from "@/lib/zenith/og";
 import { buildAbsoluteUrl, getBaseUrl, getCanonicalPathForZenithPage } from "@/lib/zenith/routes";
 import type { ZenithComponent, ZenithPage } from "@/types/zenith-content";
@@ -80,6 +82,23 @@ function eventFromPage(page: ZenithPage, canonicalUrl: string): Record<string, u
   };
 }
 
+function resolveZenithArticleDates(page: ZenithPage): {
+  datePublished?: string;
+  dateModified?: string;
+} {
+  let pub = toIsoDateOnly(page.publishedAt);
+  let mod = toIsoDateOnly(page.updatedAt);
+  if (!pub) {
+    const guide = getSiteGuideBySlug(page.slug);
+    if (guide) {
+      pub = toIsoDateOnly(guide.publishedAt);
+      mod = guide.updatedAt ? toIsoDateOnly(guide.updatedAt) : pub;
+    }
+  }
+  if (!pub) return {};
+  return { datePublished: pub, dateModified: mod ?? pub };
+}
+
 export function buildZenithJsonLd(page: ZenithPage, baseUrl?: string): Record<string, unknown>[] {
   const base = baseUrl ?? getBaseUrl();
   const path = getCanonicalPathForZenithPage(page);
@@ -99,7 +118,9 @@ export function buildZenithJsonLd(page: ZenithPage, baseUrl?: string): Record<st
       image: ogUrl,
       mainEntityOfPage: { "@type": "WebPage", "@id": canonicalUrl },
       publisher: { "@type": "Organization", name: ORG_NAME },
+      author: { "@type": "Organization", name: ORG_NAME },
       url: canonicalUrl,
+      ...resolveZenithArticleDates(page),
     });
   }
 

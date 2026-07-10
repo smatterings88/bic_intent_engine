@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { buildPageMetadata } from "@/lib/build-metadata";
+import { formatPublishedLabel } from "@/lib/content/format-publish-date";
+import { getSiteGuideArticlePath, siteGuidesByCategory } from "@/lib/site-guides";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Free Resources — Business Impact Canada",
@@ -10,72 +12,9 @@ export const metadata: Metadata = buildPageMetadata({
   path: "/resources",
 });
 
-const resourceCategories = [
-  {
-    label: "Sales",
-    resources: [
-      {
-        href: "/articles/why-good-sales-conversations-dont-close",
-        tag: "Sales · Free Guide",
-        title: "Why Good Sales Conversations Don't Close",
-        description:
-          "The deal didn't fall apart at the close. It fell apart mid-conversation — in a specific moment when the buyer's attention shifted and you didn't catch it. This guide identifies the five communication moments where buyers quietly disengage, what they're signaling when it happens, and how to bring the conversation back without it feeling like a pitch.",
-      },
-      {
-        href: "/articles/how-to-price-without-undercharging",
-        tag: "Sales · Free Guide",
-        title: "How to Price Your Services Without Undercharging",
-        description:
-          "Undercharging is a communication problem before it's a pricing problem. It happens when you can't articulate your value clearly enough for a buyer to feel the price is obvious. This guide walks through how to talk about price — the framing, the sequence, the confidence — so you stop discounting before the buyer even asks.",
-      },
-    ],
-  },
-  {
-    label: "Marketing",
-    resources: [
-      {
-        href: "/articles/one-page-marketing-plan",
-        tag: "Marketing · Free Guide",
-        title: "The One-Page Marketing Plan That Actually Works",
-        description:
-          "Most marketing plans fail because they start with tactics instead of message. This framework forces the three communication decisions that make every tactic easier: who you're talking to, what you're promising, and why they should believe you. 90 minutes to complete. Replaces weeks of confusion about where to focus.",
-      },
-      {
-        href: "/articles/what-your-ideal-client-looks-like",
-        tag: "Marketing · Free Guide",
-        title: "What Your Ideal Client Actually Looks Like",
-        description:
-          "Effective marketing communication requires knowing the exact words your buyer uses when they describe the problem you solve — not your words, theirs. This guide helps you build the customer profile that sharpens all your messaging: the fears, frustrations, goals, and language your ideal client is actually using when they go looking for what you offer.",
-      },
-    ],
-  },
-  {
-    label: "Strategy & Execution",
-    resources: [
-      {
-        href: "/articles/90-day-execution-plan",
-        tag: "Strategy · Free Guide",
-        title: "The 90-Day Execution Plan for Small Business",
-        description:
-          "A strategy that only lives in your head isn't executable. A plan that's too complicated to explain to a new team member won't survive first contact with reality. This framework helps you communicate your priority clearly enough — to yourself, to your team, to your calendar — that it actually gets done. One priority. Three milestones. A weekly rhythm. A recovery process.",
-      },
-    ],
-  },
-  {
-    label: "Mindset & Leadership",
-    resources: [
-      {
-        href: "/articles/communication-habits-for-leaders",
-        tag: "Leadership · Free Guide",
-        title: "The Communication Habits That Make You a Better Leader",
-        description:
-          "How you make decisions, how you give feedback, how you handle conflict, how you set expectations — these are communication skills, and they become your company's culture before you have a company. This guide covers the leadership communication fundamentals worth building now, while you still have the space to build them intentionally.",
-      },
-    ],
-  },
-] as const;
-
 export default function ResourcesPage() {
+  const resourceCategories = siteGuidesByCategory();
+
   return (
     <>
       <section className="bic-page-hero">
@@ -97,11 +36,21 @@ export default function ResourcesPage() {
             <div className="category-label">{category.label}</div>
             <div className="resource-grid">
               {category.resources.map((resource) => (
-                <Link key={resource.href} href={resource.href} className="resource-card">
+                <Link
+                  key={resource.slug}
+                  href={getSiteGuideArticlePath(resource.slug)}
+                  className="resource-card"
+                >
                   <div className="resource-tag">{resource.tag}</div>
                   <h3>{resource.title}</h3>
                   <p>{resource.description}</p>
-                  <span className="resource-link">Read Guide →</span>
+                  <span className="resource-link">
+                    Read Guide →{" "}
+                    <span className="sr-only">({formatPublishedLabel(resource.publishedAt)})</span>
+                  </span>
+                  <p className="mt-3 text-xs text-muted-foreground">
+                    {formatPublishedLabel(resource.publishedAt)}
+                  </p>
                 </Link>
               ))}
             </div>
@@ -143,11 +92,14 @@ export default function ResourcesPage() {
           <p className="bottom-cta-eyebrow">Always Free</p>
           <h2>More Resources Added Regularly — Always Free</h2>
           <p>
-            All resources are free, always. If you want to support what we do, consider making a
-            donation — it funds everything you&apos;re reading here.
+            New guides and articles are published on our{" "}
+            <Link href="/articles" className="underline underline-offset-4 hover:text-white">
+              blog
+            </Link>
+            . Everything stays free — nonprofit-backed, no paywalls.
           </p>
-          <Link href="/donate" className="btn-primary">
-            Support Our Mission
+          <Link href="/articles" className="btn-primary">
+            Browse the Blog
           </Link>
         </div>
       </div>
