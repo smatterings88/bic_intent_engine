@@ -30,18 +30,18 @@ export function Footer() {
           <div className="site-footer-col">
             <h4>Programs</h4>
             <ul>
-              <FooterLink href="/programs">Marketing Mastery</FooterLink>
-              <FooterLink href="/programs">Sales Mastery</FooterLink>
-              <FooterLink href="/programs">Mindset &amp; Leadership</FooterLink>
-              <FooterLink href="/programs">Strategy &amp; Execution</FooterLink>
+              <FooterLink href="/programs#marketing-mastery">Marketing Mastery</FooterLink>
+              <FooterLink href="/programs#sales-mastery">Sales Mastery</FooterLink>
+              <FooterLink href="/programs#mindset-leadership">Mindset &amp; Leadership</FooterLink>
+              <FooterLink href="/programs#strategy-execution">Strategy &amp; Execution</FooterLink>
             </ul>
           </div>
           <div className="site-footer-col">
             <h4>Organization</h4>
             <ul>
               <FooterLink href="/about">About Us</FooterLink>
+              <FooterLink href="/articles">Blog</FooterLink>
               <FooterLink href="/resources">Free Resources</FooterLink>
-              <FooterLink href="/donate">Donate</FooterLink>
               <FooterLink href="/contact">Contact</FooterLink>
               <FooterLink href="/privacy">Privacy Policy</FooterLink>
             </ul>

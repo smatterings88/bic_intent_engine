@@ -10,6 +10,7 @@ import {
   listPublishedArticlesForInternalLinks,
 } from "@/lib/articles/read";
 import { isValidSlug } from "@/lib/content/slug";
+import { SITE_GUIDE_SLUGS } from "@/lib/site-guides";
 import {
   getPublishedZenithPageBySlug,
   listPublishedZenithSlugsByContentType,
@@ -26,7 +27,13 @@ export async function generateStaticParams() {
   const legacy = await listPublishedArticleSlugs();
   const zenith = await listPublishedZenithSlugsByContentType("article");
   const seen = new Set(legacy.map((x) => x.slug));
-  return [...legacy, ...zenith.filter((z) => !seen.has(z.slug))];
+  const params = [...legacy, ...zenith.filter((z) => !seen.has(z.slug))];
+  for (const slug of SITE_GUIDE_SLUGS) {
+    if (!params.some((x) => x.slug === slug)) {
+      params.push({ slug });
+    }
+  }
+  return params;
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {

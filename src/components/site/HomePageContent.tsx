@@ -4,24 +4,28 @@ import Link from "next/link";
 const programs = [
   {
     id: "p1",
+    anchorId: "marketing-mastery",
     num: "Program 01",
     title: "Marketing Mastery",
     body: "How to communicate your value to the people who need it — in language they recognize, through channels they trust.",
   },
   {
     id: "p2",
+    anchorId: "sales-mastery",
     num: "Program 02",
     title: "Sales Mastery",
     body: "Why good conversations don't close — and what's actually happening in the moments buyers go quiet.",
   },
   {
     id: "p3",
+    anchorId: "mindset-leadership",
     num: "Program 03",
     title: "Mindset & Leadership",
     body: "The internal clarity that makes external communication possible. You can't lead people you haven't learned to speak to.",
   },
   {
     id: "p4",
+    anchorId: "strategy-execution",
     num: "Program 04",
     title: "Strategy & Execution",
     body: "A plan nobody understands doesn't get executed. Strategy is communication — from priorities to calendar.",
@@ -94,7 +98,7 @@ export function HomePageContent() {
                 <span className="program-num">{program.num}</span>
                 <h3>{program.title}</h3>
                 <p>{program.body}</p>
-                <Link href="/programs" className="program-link">
+                <Link href={`/programs#${program.anchorId}`} className="program-link">
                   Explore program
                 </Link>
               </div>

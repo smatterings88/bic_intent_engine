@@ -46,9 +46,12 @@ export function ContactInquiryForm() {
     return (
       <div className="border border-border rounded-md p-8 bg-secondary/40">
         <div className="eyebrow">Received</div>
-        <h2 className="mt-3 font-serif text-2xl text-foreground">Thank you for your message.</h2>
+        <h2 className="mt-3 font-serif text-2xl text-foreground">
+          Thanks — we&apos;ll be in touch.
+        </h2>
         <p className="mt-3 text-muted-foreground">
-          A member of our team will follow up by email if a response is required.
+          Your message was received. A member of our team will follow up by email if a response is
+          required.
         </p>
       </div>
     );
