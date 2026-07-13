@@ -606,6 +606,29 @@
   }
 }
 
+/* Unlayered: beat Zenith inline scoped `a { color: #D4531A }` (injected after globals in @layer). */
+.zenith-article-body .zenith-html-snippet[data-render-mode="html_snippet"] .zenith-html-snippet-body > div > div a,
+.zenith-article-body
+  .zenith-html-snippet[data-render-mode="html_snippet"]
+  .zenith-html-snippet-body
+  > section
+  > div
+  > div:last-child
+  a:first-child {
+  color: #ffffff;
+}
+
+.zenith-article-body .zenith-html-snippet[data-render-mode="html_snippet"] .zenith-html-snippet-body > div > div a:hover,
+.zenith-article-body
+  .zenith-html-snippet[data-render-mode="html_snippet"]
+  .zenith-html-snippet-body
+  > section
+  > div
+  > div:last-child
+  a:first-child:hover {
+  color: #ffffff;
+}
+
 @keyframes sbi-fade-in {
   from {
     opacity: 0;
