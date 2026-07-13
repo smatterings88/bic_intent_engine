@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { sherpaPartnerCopy } from "@/lib/sherpa-partner-copy";
+
 const programs = [
   {
     id: "p1",
@@ -29,30 +31,6 @@ const programs = [
     num: "Program 04",
     title: "Strategy & Execution",
     body: "A plan nobody understands doesn't get executed. Strategy is communication — from priorities to calendar.",
-  },
-] as const;
-
-const testimonials = [
-  {
-    id: "sarah",
-    quote:
-      "I'd been in business four years. I thought my marketing problem was a budget problem. Turned out it was a message problem. The Marketing Mastery program rewired how I talk about what I do — in 90 minutes.",
-    name: "Sarah M.",
-    role: "Freelance Consultant, Ontario",
-  },
-  {
-    id: "david",
-    quote:
-      "Three sales calls in a row that felt perfect — and didn't close. After the Sales Mastery materials I understood exactly what was happening. It was a communication moment I was missing every time.",
-    name: "David R.",
-    role: "B2B Founder, British Columbia",
-  },
-  {
-    id: "priya",
-    quote:
-      "I knew what I wanted to build. I just couldn't get my team moving in the same direction. The Strategy & Execution module was the clearest framework I've found — and it's free.",
-    name: "Priya K.",
-    role: "Startup Founder, Alberta",
   },
 ] as const;
 
@@ -151,44 +129,15 @@ export function HomePageContent() {
         </div>
       </section>
 
-      <section className="testimonials-section" aria-label="Entrepreneur feedback">
-        <div className="site-container">
-          <p className="section-eyebrow">Real Entrepreneurs</p>
-          <h2 className="section-title">What Happens When the Communication Gap Closes</h2>
-          <div className="testimonials-grid">
-            {testimonials.map((t) => (
-              <div key={t.id} className="testimonial-card">
-                <p className="testimonial-quote">{t.quote}</p>
-                <div>
-                  <div className="testimonial-name">{t.name}</div>
-                  <div className="testimonial-role">{t.role}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="sherpa-section" aria-label="Featured partner resource">
         <div className="site-container">
           <div className="sherpa-box">
             <div>
               <span className="sherpa-tag">Featured Partner Resource</span>
               <h2>Your Sales Call Is a Communication Event. Do You Know Where Yours Broke Down?</h2>
-              <p>
-                Most lost deals are decided in a specific communication moment mid-call — a signal
-                the buyer sent that went unread, a question that wasn&apos;t asked, a hesitation
-                that got steamrolled. Our partner Alex The Sherpa takes a recording of a real sales
-                call and identifies exactly where those moments were.
-              </p>
-              <p>
-                This is a communication diagnostic on your specific conversation. We recommend it to
-                every entrepreneur working through Sales Mastery.
-              </p>
-              <p className="sherpa-note">
-                Free resource from our partner · No cost, no commitment · External link to
-                alexthesherpa.com
-              </p>
+              <p>{sherpaPartnerCopy.paragraph1}</p>
+              <p>{sherpaPartnerCopy.paragraph2}</p>
+              <p className="sherpa-note">{sherpaPartnerCopy.note}</p>
             </div>
             <div className="flex shrink-0 flex-col items-center gap-2.5">
               <a

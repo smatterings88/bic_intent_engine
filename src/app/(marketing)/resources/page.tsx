@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import { buildPageMetadata } from "@/lib/build-metadata";
 import { formatPublishedLabel } from "@/lib/content/format-publish-date";
+import { sherpaPartnerCopy } from "@/lib/sherpa-partner-copy";
 import { getSiteGuideArticlePath, siteGuidesByCategory } from "@/lib/site-guides";
 
 export const metadata: Metadata = buildPageMetadata({
@@ -62,18 +63,8 @@ export default function ResourcesPage() {
           <h2>
             Your Sales Call Is a Communication Event. Get a Forensic Analysis of Yours — Free.
           </h2>
-          <p>
-            Most lost deals are decided in a specific communication moment mid-call — a signal the
-            buyer sent that went unread, a question that wasn&apos;t asked, a hesitation that got
-            steamrolled instead of addressed. Our partner <strong>Alex The Sherpa</strong> takes a
-            recording of a real sales call and identifies exactly where those moments were.
-          </p>
-          <p>
-            This is not generic sales coaching. It&apos;s a communication diagnostic on your
-            specific conversation — the moment the buyer&apos;s interest shifted, what they were
-            signaling, and what a different response would have sounded like. We recommend it to
-            every entrepreneur working through Sales Mastery.
-          </p>
+          <p>{sherpaPartnerCopy.paragraph1}</p>
+          <p>{sherpaPartnerCopy.paragraph2}</p>
           <a
             href="https://alexthesherpa.com"
             target="_blank"
@@ -82,10 +73,7 @@ export default function ResourcesPage() {
           >
             Get Your Free Sales Call Analysis →
           </a>
-          <span className="partner-note">
-            Free resource from our partner · No cost, no commitment · External link to
-            alexthesherpa.com
-          </span>
+          <span className="partner-note">{sherpaPartnerCopy.note}</span>
         </div>
 
         <div className="bottom-cta">

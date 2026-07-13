@@ -39,18 +39,31 @@ export default function PrivacyPage() {
           </p>
         </section>
         <section>
-          <h2 className="font-serif text-xl text-foreground mb-3">Research data</h2>
+          <h2 className="font-serif text-xl text-foreground mb-3">Canadian privacy (PIPEDA)</h2>
           <p>
-            All conversational data referenced in our publications is anonymized and contributed
-            under explicit consent. No personal identifiers are retained beyond what is necessary
-            for the integrity of the research.
+            Business Impact Canada is a Canadian organization. Personal information we collect is
+            handled in accordance with Canada&apos;s Personal Information Protection and Electronic
+            Documents Act (PIPEDA). For privacy-related requests or questions, contact{" "}
+            <a
+              href="mailto:businessimpactcanada@gmail.com"
+              className="text-foreground underline underline-offset-4"
+            >
+              businessimpactcanada@gmail.com
+            </a>
+            .
           </p>
         </section>
         <section>
           <h2 className="font-serif text-xl text-foreground mb-3">Contact</h2>
           <p>
             Questions regarding this policy may be directed to{" "}
-            <span className="text-foreground">businessimpactcanada@gmail.com</span>.
+            <a
+              href="mailto:businessimpactcanada@gmail.com"
+              className="text-foreground underline underline-offset-4"
+            >
+              businessimpactcanada@gmail.com
+            </a>
+            .
           </p>
         </section>
       </article>

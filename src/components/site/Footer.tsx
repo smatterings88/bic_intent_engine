@@ -44,6 +44,7 @@ export function Footer() {
               <FooterLink href="/resources">Free Resources</FooterLink>
               <FooterLink href="/contact">Contact</FooterLink>
               <FooterLink href="/privacy">Privacy Policy</FooterLink>
+              <FooterLink href="/terms">Terms of Service</FooterLink>
             </ul>
           </div>
         </div>
@@ -56,6 +57,8 @@ export function Footer() {
             <a href="mailto:businessimpactcanada@gmail.com">businessimpactcanada@gmail.com</a>
             &nbsp;·&nbsp;
             <Link href="/privacy">Privacy</Link>
+            &nbsp;·&nbsp;
+            <Link href="/terms">Terms</Link>
             &nbsp;·&nbsp;
             <Link href="/contact">Contact</Link>
           </span>
