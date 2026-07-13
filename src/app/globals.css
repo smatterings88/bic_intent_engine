@@ -538,7 +538,7 @@
   }
 
   .zenith-article-body .zenith-html-snippet .zenith-html-snippet-body h2 {
-    @apply mb-5 mt-12 max-w-[70ch] border-t border-border/80 pt-12 font-serif text-2xl text-foreground first:mt-0 first:border-t-0 first:pt-0 sm:text-[1.65rem];
+    @apply mb-5 mt-16 max-w-[70ch] border-t border-border/80 pt-16 font-serif text-2xl text-foreground first:mt-0 first:border-t-0 first:pt-0 sm:text-[1.65rem];
   }
 
   .zenith-article-body .zenith-html-snippet .zenith-html-snippet-body > div > div {
@@ -562,7 +562,7 @@
   }
 
   .zenith-article-body .zenith-html-snippet .zenith-html-snippet-body > div > div > h2 {
-    @apply max-w-none border-0 pt-0;
+    @apply mb-6 max-w-none border-0 pt-0;
   }
 
   .zenith-article-body .zenith-html-snippet .zenith-html-snippet-body > div > div > div p {
