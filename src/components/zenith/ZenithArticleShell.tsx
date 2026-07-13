@@ -19,7 +19,7 @@ export function ZenithArticleShell({ page, children }: { page: ZenithPage; child
   const publishedLabel = resolvePublishedLabel(page);
 
   return (
-    <article className="mx-auto max-w-[760px] px-4 pb-20 pt-8 sm:px-6 sm:pt-12">
+    <article className="mx-auto w-full max-w-4xl px-7 pb-20 pt-8 sm:pt-12">
       <header className="mb-8 border-b border-slate-200/80 pb-8">
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#1e3560]">Article</p>
         {publishedLabel ? <p className="mt-2 text-sm text-slate-500">{publishedLabel}</p> : null}
