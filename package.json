@@ -18,7 +18,8 @@
     "validate:article-rotation": "tsx scripts/validate-article-rotation.ts",
     "bootstrap:super-users": "tsx scripts/bootstrap-super-users.ts",
     "ghl:diagnose": "tsx scripts/ghl-diagnose.ts",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "generate:favicons": "node scripts/generate-favicon-pngs.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
