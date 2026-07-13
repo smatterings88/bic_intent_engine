@@ -30,7 +30,7 @@ export function ZenithArticleShell({ page, children }: { page: ZenithPage; child
           <p className="mt-4 text-lg leading-relaxed text-slate-600">{page.seo.metaDescription}</p>
         ) : null}
       </header>
-      {children}
+      <div className="zenith-article-body">{children}</div>
     </article>
   );
 }

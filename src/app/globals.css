@@ -510,6 +510,51 @@
   .site-footer-bottom a {
     @apply text-white/40 transition-colors duration-150 hover:text-white/80 hover:no-underline;
   }
+
+  /* Zenith article html_snippets — body typography after embedded chrome is stripped */
+  .zenith-article-body .zenith-html-snippet-body {
+    @apply max-w-[65ch];
+  }
+
+  .zenith-article-body .zenith-html-snippet-body p {
+    @apply mb-5 text-base leading-[1.75] text-muted-foreground;
+  }
+
+  .zenith-article-body .zenith-html-snippet-body p strong {
+    @apply font-semibold text-foreground;
+  }
+
+  .zenith-article-body .zenith-html-snippet-body h2 {
+    @apply mb-4 mt-10 border-t border-border/80 pt-10 font-serif text-2xl text-foreground first:mt-0 first:border-t-0 first:pt-0 sm:text-[1.65rem];
+  }
+
+  .zenith-article-body .zenith-html-snippet-body > div > div {
+    @apply my-8 rounded-lg border border-border bg-muted/30 p-6;
+  }
+
+  .zenith-article-body .zenith-html-snippet-body > div > div p:first-child {
+    @apply mb-2 font-semibold text-foreground;
+  }
+
+  .zenith-article-body .zenith-html-snippet-body > section {
+    @apply mt-14 rounded-lg border border-border bg-primary/5 p-8 text-center;
+  }
+
+  .zenith-article-body .zenith-html-snippet-body > section h2 {
+    @apply mt-4 border-0 pt-0 font-serif text-2xl text-foreground;
+  }
+
+  .zenith-article-body .zenith-html-snippet-body > section p {
+    @apply text-muted-foreground;
+  }
+
+  .zenith-article-body .zenith-html-snippet-body > section div {
+    @apply mt-6 flex flex-wrap justify-center gap-3;
+  }
+
+  .zenith-article-body .zenith-html-snippet-body > section div a {
+    @apply inline-flex min-h-[44px] items-center justify-center rounded-full border border-border bg-background px-7 py-3.5 text-sm font-medium text-foreground transition-colors duration-150 hover:bg-muted/60 hover:no-underline;
+  }
 }
 
 @keyframes sbi-fade-in {

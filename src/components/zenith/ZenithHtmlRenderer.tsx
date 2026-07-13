@@ -9,6 +9,7 @@ import {
   renderSanitizedHtmlWithSlots,
 } from "@/lib/zenith/render-html-with-slots";
 import { slotConfigToLeadForm } from "@/lib/zenith/slot-config";
+import { stripEmbeddedSiteChromeFromArticleHtml } from "@/lib/zenith/strip-embedded-chrome";
 import { ZENITH_HTML_SNIPPET_CLASS } from "@/lib/zenith/zenith-css-safety";
 import type { ZenithHtmlSnippet, ZenithPage, ZenithSlotConfig } from "@/types/zenith-content";
 
@@ -57,7 +58,9 @@ export function ZenithHtmlRenderer({
   html: ZenithHtmlSnippet;
   slots?: ZenithSlotConfig[];
 }) {
-  const body = html.sanitizedBody?.trim() || html.body?.trim() || "";
+  const rawBody = html.sanitizedBody?.trim() || html.body?.trim() || "";
+  const body =
+    page.contentType === "article" ? stripEmbeddedSiteChromeFromArticleHtml(rawBody) : rawBody;
   const scopedCss = html.sanitizedCss?.trim() || "";
 
   const renderSlot = createSlotRenderer({
