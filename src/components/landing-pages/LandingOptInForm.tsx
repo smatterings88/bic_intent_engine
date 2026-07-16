@@ -9,11 +9,10 @@ const NEXT_STEP_LABELS: Record<string, string> = {
   webinar: "Join the webinar",
   upload: "Upload your materials",
   book_call: "Book a call",
-  sherpa_offer: "Review the Sherpa offer",
 };
 
 function labelForNextStep(next?: string): string | null {
-  if (!next?.trim()) return null;
+  if (!next?.trim() || next === "sherpa_offer") return null;
   return NEXT_STEP_LABELS[next] ?? next;
 }
 

@@ -52,8 +52,7 @@ export function getHrefForZenithDestination(
   }
 
   if (d === "call-upload") {
-    const demo = process.env.NEXT_PUBLIC_SHERPA_DEMO_URL?.trim();
-    return demo && demo.length > 0 ? demo : "/app";
+    return "/app";
   }
   if (d === "contact-inbox") {
     return "/contact";

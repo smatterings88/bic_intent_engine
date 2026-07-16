@@ -3,7 +3,6 @@ import Link from "next/link";
 
 import { buildPageMetadata } from "@/lib/build-metadata";
 import { formatPublishedLabel } from "@/lib/content/format-publish-date";
-import { sherpaPartnerCopy } from "@/lib/sherpa-partner-copy";
 import { getSiteGuideArticlePath, siteGuidesByCategory } from "@/lib/site-guides";
 
 export const metadata: Metadata = buildPageMetadata({
@@ -57,24 +56,6 @@ export default function ResourcesPage() {
             </div>
           </div>
         ))}
-
-        <div className="partner-feature">
-          <div className="partner-feature-label">Featured Partner Resource</div>
-          <h2>
-            Your Sales Call Is a Communication Event. Get a Forensic Analysis of Yours — Free.
-          </h2>
-          <p>{sherpaPartnerCopy.paragraph1}</p>
-          <p>{sherpaPartnerCopy.paragraph2}</p>
-          <a
-            href="https://alexthesherpa.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-primary"
-          >
-            Get Your Free Sales Call Analysis →
-          </a>
-          <span className="partner-note">{sherpaPartnerCopy.note}</span>
-        </div>
 
         <div className="bottom-cta">
           <p className="bottom-cta-eyebrow">Always Free</p>

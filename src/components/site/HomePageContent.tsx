@@ -1,8 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { sherpaPartnerCopy } from "@/lib/sherpa-partner-copy";
-
 const programs = [
   {
     id: "p1",
@@ -124,33 +122,6 @@ export function HomePageContent() {
               <Link href="/about" className="about-link">
                 Read our full story →
               </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="sherpa-section" aria-label="Featured partner resource">
-        <div className="site-container">
-          <div className="sherpa-box">
-            <div>
-              <span className="sherpa-tag">Featured Partner Resource</span>
-              <h2>Your Sales Call Is a Communication Event. Do You Know Where Yours Broke Down?</h2>
-              <p>{sherpaPartnerCopy.paragraph1}</p>
-              <p>{sherpaPartnerCopy.paragraph2}</p>
-              <p className="sherpa-note">{sherpaPartnerCopy.note}</p>
-            </div>
-            <div className="flex shrink-0 flex-col items-center gap-2.5">
-              <a
-                href="https://alexthesherpa.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-sherpa"
-              >
-                Get Your Free
-                <br />
-                Sales Analysis →
-              </a>
-              <span className="sherpa-link-note">Opens alexthesherpa.com in a new tab</span>
             </div>
           </div>
         </div>

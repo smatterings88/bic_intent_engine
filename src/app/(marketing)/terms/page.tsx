@@ -11,7 +11,7 @@ export const metadata: Metadata = buildPageMetadata({
 export default function TermsPage() {
   return (
     <>
-      <PageHeader eyebrow="Legal" title="Terms of Use" lede="Last updated: January 2026" />
+      <PageHeader eyebrow="Legal" title="Terms of Use" lede="Last updated: July 2026" />
       <article className="mx-auto max-w-3xl space-y-8 py-14 prose-research page-gutter sm:py-16">
         <section>
           <h2 className="font-serif text-xl text-foreground mb-3">Acceptance</h2>
