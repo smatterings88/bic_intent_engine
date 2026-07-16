@@ -52,7 +52,7 @@ export function getHrefForZenithDestination(
   }
 
   if (d === "call-upload") {
-    return "/app";
+    return "/contact";
   }
   if (d === "contact-inbox") {
     return "/contact";
