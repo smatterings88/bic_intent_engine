@@ -8,6 +8,12 @@ import {
   shouldHideGlobalSiteFooter,
 } from "../src/lib/zenith/page-layout";
 import { renderSanitizedHtmlWithSlots } from "../src/lib/zenith/render-html-with-slots";
+import {
+  RECORDINGS_META_WITHOUT_SHERPA,
+  SHERPA_RECORDINGS_META,
+  sanitizeZenithPageSherpaBranding,
+  stripSherpaFromString,
+} from "../src/lib/zenith/strip-sherpa-branding";
 import { validateZenithPagePayload } from "../src/lib/zenith/validation";
 import type { ZenithPage } from "../src/types/zenith-content";
 
@@ -253,6 +259,58 @@ function testIngestPayloadWithLayout() {
   assert.equal(shouldHideGlobalSiteFooter(v.normalized!), true);
 }
 
+function testStripSherpaBranding() {
+  assert.equal(
+    stripSherpaFromString("Sales Breakdown Institute · Sherpa"),
+    "Sales Breakdown Institute",
+  );
+  assert.equal(stripSherpaFromString(SHERPA_RECORDINGS_META), RECORDINGS_META_WITHOUT_SHERPA);
+  assert.equal(stripSherpaFromString("Sherpa Verdict"), "");
+
+  const forensic = sanitizeZenithPageSherpaBranding({
+    slug: "why-you-keep-losing-deals",
+    contentType: "landing_page",
+    status: "published",
+    title: "Why You Keep Losing Deals",
+    components: [
+      {
+        type: "page-hero",
+        variant: "forensic-navy",
+        forensicArtifact: {
+          verdictLabel: "Sherpa Verdict",
+          verdict: "Deal gone at 14:33.",
+        },
+      },
+    ],
+  } as ZenithPage);
+
+  const hero = forensic.components[0];
+  assert.equal(hero.type, "page-hero");
+  if (hero.type === "page-hero") {
+    assert.equal(hero.forensicArtifact?.verdictLabel, undefined);
+    assert.equal(hero.forensicArtifact?.verdict, "Deal gone at 14:33.");
+  }
+
+  const recordings = sanitizeZenithPageSherpaBranding({
+    slug: "what-your-recordings-reveal",
+    contentType: "landing_page",
+    status: "published",
+    title: "What Your Recordings Reveal",
+    seo: {
+      metaDescription: SHERPA_RECORDINGS_META,
+      ogDescription: SHERPA_RECORDINGS_META,
+    },
+    html: {
+      sanitizedBody:
+        '<span>Sales Breakdown Institute · Sherpa</span><p>Fathom, Gong, and Otter capture the conversation. Sherpa reveals where the buyer stopped evaluating.</p>',
+    },
+  } as ZenithPage);
+
+  assert.equal(recordings.seo?.metaDescription, RECORDINGS_META_WITHOUT_SHERPA);
+  assert.equal(recordings.seo?.ogDescription, RECORDINGS_META_WITHOUT_SHERPA);
+  assert.ok(!recordings.html?.sanitizedBody?.includes("Sherpa"));
+}
+
 function main() {
   testCssSanitizer();
   testHtmlBodyRejectsStyle();
@@ -262,6 +320,7 @@ function main() {
   testHideGlobalFooterRules();
   testIngestPayload();
   testIngestPayloadWithLayout();
+  testStripSherpaBranding();
   process.stdout.write("Zenith HTML/CSS validation checks passed.\n");
 }
 

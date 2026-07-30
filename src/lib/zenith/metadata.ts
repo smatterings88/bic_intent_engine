@@ -49,6 +49,7 @@ export function buildZenithPageMetadata(
     },
     twitter: {
       card: "summary_large_image",
+      description: ogDescription,
       images: [resolvedOgImageUrl],
     },
   };

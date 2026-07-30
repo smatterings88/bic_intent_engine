@@ -9,6 +9,7 @@ import { isValidSlug } from "@/lib/content/slug";
 import { ensureFirebaseAdmin } from "@/lib/firebase/admin";
 import { prepareZenithPageForPublish } from "@/lib/zenith/publishValidation";
 import { revalidateZenithPagePaths } from "@/lib/zenith/revalidate";
+import { sanitizeZenithPageSherpaBranding } from "@/lib/zenith/strip-sherpa-branding";
 import { validateZenithPageDocument } from "@/lib/zenith/validation";
 import type { ZenithContentType, ZenithPage, ZenithPageStatus } from "@/types/zenith-content";
 
@@ -67,7 +68,9 @@ export async function getZenithPageBySlug(slug: string): Promise<ZenithPage | nu
   if (!adminDb) return null;
   const snap = await adminDb.collection(CONTENT_COLLECTIONS.zenithPages).doc(slug).get();
   if (!snap.exists) return null;
-  return serializeZenithPage({ ...(snap.data() as Record<string, unknown>), slug });
+  return sanitizeZenithPageSherpaBranding(
+    serializeZenithPage({ ...(snap.data() as Record<string, unknown>), slug }),
+  );
 }
 
 export async function getPublishedZenithPageBySlug(slug: string): Promise<ZenithPage | null> {

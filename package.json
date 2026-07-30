@@ -17,6 +17,7 @@
     "validate:zenith-html-css": "tsx scripts/validate-zenith-html-css.tsx",
     "validate:article-rotation": "tsx scripts/validate-article-rotation.ts",
     "bootstrap:super-users": "tsx scripts/bootstrap-super-users.ts",
+    "patch:sherpa-branding": "tsx scripts/patch-sherpa-branding.ts",
     "ghl:diagnose": "tsx scripts/ghl-diagnose.ts",
     "format": "prettier --write .",
     "generate:favicons": "node scripts/generate-favicon-pngs.mjs"

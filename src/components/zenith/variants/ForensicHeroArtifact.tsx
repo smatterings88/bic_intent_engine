@@ -12,7 +12,7 @@ const DEFAULT_TIMESTAMPS = ["00:00", "19:08", "41:22"];
 const DEFAULT_DRIFT_PERCENT = 54;
 const DEFAULT_DRIFT_LABEL = "DRIFT DETECTED";
 const DEFAULT_STATUS = "Forensic Complete";
-const DEFAULT_VERDICT_LABEL = "Sherpa Verdict";
+const DEFAULT_VERDICT_LABEL = "";
 const DEFAULT_FOOTER = "Free Forensic Analysis · BusinessImpactCanada.com";
 
 export function ForensicHeroArtifact({ artifact }: { artifact: ForensicArtifact }) {
@@ -86,7 +86,7 @@ export function ForensicHeroArtifact({ artifact }: { artifact: ForensicArtifact 
       ) : null}
       {artifact.verdict ? (
         <div className="fa-verdict">
-          <p className="fa-verdict-label">{verdictLabel}</p>
+          {verdictLabel ? <p className="fa-verdict-label">{verdictLabel}</p> : null}
           <p className="fa-verdict-text">{artifact.verdict}</p>
         </div>
       ) : null}
