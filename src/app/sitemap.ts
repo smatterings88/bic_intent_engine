@@ -8,14 +8,11 @@ import { isReservedTopLevelSlug } from "@/lib/content/slug";
 const STATIC_PATHS = [
   "/",
   "/about",
-  "/research",
   "/programs",
   "/resources",
-  "/insights",
   "/contact",
   "/privacy",
   "/terms",
-  "/where-deals-break",
   "/articles",
 ] as const;
 
@@ -52,7 +49,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.8,
     }));
     withArticles = [...entries, ...articleUrls];
-  } catch {
+  } catch (error) {
+    console.error("[sitemap] listPublishedArticles() failed", error);
     withArticles = entries;
   }
 
@@ -67,7 +65,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         priority: 0.85,
       }));
     return [...withArticles, ...landingUrls];
-  } catch {
+  } catch (error) {
+    console.error("[sitemap] listPublishedLandingPages() failed", error);
     return withArticles;
   }
 }
