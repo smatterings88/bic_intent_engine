@@ -46,8 +46,7 @@ export default function AboutPage() {
           <h2 className="font-serif text-2xl text-foreground mb-4">Nonprofit commitment</h2>
           <p>
             Business Impact Canada (15213614 Canada Foundation) is a registered Canadian nonprofit.
-            All programs are free — always. Donations fund program delivery for entrepreneurs who
-            need guidance but cannot afford business school or coaching.
+            All programs are free — always, for every entrepreneur who needs them.
           </p>
         </section>
       </article>
