@@ -29,24 +29,24 @@ export default function AboutPage() {
         <section>
           <h2 className="font-serif text-2xl text-foreground mb-4">Mission</h2>
           <p>
-            We believe most business problems are communication problems in disguise. Our programs
-            help entrepreneurs find those problems and learn to solve them — at no cost, with no
-            paywalls, and no email gates on core resources.
+            We believe most business problems are communication problems in disguise. Our free
+            guides help entrepreneurs find those problems and learn to solve them — at no cost, with
+            no paywalls, and no email gates on core resources.
           </p>
         </section>
         <section>
           <h2 className="font-serif text-2xl text-foreground mb-4">Approach</h2>
           <p>
             Our content is practical, direct, and built for entrepreneurs who are doing the work —
-            not for consultants selling frameworks. Every program comes back to the same insight:
-            clarity in how you communicate determines whether your business moves forward.
+            not for consultants selling frameworks. Every learning area comes back to the same
+            insight: clarity in how you communicate determines whether your business moves forward.
           </p>
         </section>
         <section>
           <h2 className="font-serif text-2xl text-foreground mb-4">Nonprofit commitment</h2>
           <p>
             Business Impact Canada (15213614 Canada Foundation) is a registered Canadian nonprofit.
-            All programs are free — always, for every entrepreneur who needs them.
+            All resources are free — always, for every entrepreneur who needs them.
           </p>
         </section>
       </article>

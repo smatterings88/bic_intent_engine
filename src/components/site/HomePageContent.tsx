@@ -1,36 +1,61 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const programs = [
+import { getSiteGuideArticlePath, getSiteGuideBySlug, type SiteGuide } from "@/lib/site-guides";
+
+const learningAreas = [
   {
     id: "p1",
     anchorId: "marketing-mastery",
-    num: "Program 01",
+    num: "Area 01",
     title: "Marketing Mastery",
     body: "How to communicate your value to the people who need it — in language they recognize, through channels they trust.",
+    guideSlugs: ["one-page-marketing-plan", "what-your-ideal-client-looks-like"],
   },
   {
     id: "p2",
     anchorId: "sales-mastery",
-    num: "Program 02",
+    num: "Area 02",
     title: "Sales Mastery",
     body: "Why good conversations don't close — and what's actually happening in the moments buyers go quiet.",
+    guideSlugs: ["why-good-sales-conversations-dont-close", "how-to-price-without-undercharging"],
   },
   {
     id: "p3",
     anchorId: "mindset-leadership",
-    num: "Program 03",
+    num: "Area 03",
     title: "Mindset & Leadership",
     body: "The internal clarity that makes external communication possible. You can't lead people you haven't learned to speak to.",
+    guideSlugs: ["communication-habits-for-leaders"],
   },
   {
     id: "p4",
     anchorId: "strategy-execution",
-    num: "Program 04",
+    num: "Area 04",
     title: "Strategy & Execution",
     body: "A plan nobody understands doesn't get executed. Strategy is communication — from priorities to calendar.",
+    guideSlugs: ["90-day-execution-plan"],
   },
 ] as const;
+
+function resolveGuides(slugs: readonly string[]): SiteGuide[] {
+  const guides: SiteGuide[] = [];
+  for (const slug of slugs) {
+    const guide = getSiteGuideBySlug(slug);
+    if (guide) {
+      guides.push(guide);
+    }
+  }
+  return guides;
+}
+
+function areaCardLink(area: (typeof learningAreas)[number]): { href: string; label: string } {
+  const guides = resolveGuides(area.guideSlugs);
+  if (guides.length === 1) {
+    return { href: getSiteGuideArticlePath(guides[0].slug), label: "Read the guide" };
+  }
+  return { href: `/learning-areas#${area.anchorId}`, label: "Browse this area" };
+}
 
 export function HomePageContent() {
   return (
@@ -61,24 +86,27 @@ export function HomePageContent() {
       <section className="programs-section" aria-label="Program areas">
         <div className="site-container">
           <div className="mb-11">
-            <p className="section-eyebrow">Free Programs</p>
+            <p className="section-eyebrow">Free Learning Areas</p>
             <h2 className="section-title">Four Areas. One Root Cause.</h2>
             <p className="section-sub mt-3">
-              Every program comes back to the same insight: most business problems are communication
-              problems in disguise. We teach you to find them.
+              Every learning area comes back to the same insight: most business problems are
+              communication problems in disguise. We teach you to find them.
             </p>
           </div>
           <div className="programs-grid">
-            {programs.map((program) => (
-              <div key={program.id} className={`program-card ${program.id}`}>
-                <span className="program-num">{program.num}</span>
-                <h3>{program.title}</h3>
-                <p>{program.body}</p>
-                <Link href={`/programs#${program.anchorId}`} className="program-link">
-                  Explore program
-                </Link>
-              </div>
-            ))}
+            {learningAreas.map((area) => {
+              const link = areaCardLink(area);
+              return (
+                <div key={area.id} className={`program-card ${area.id}`}>
+                  <span className="program-num">{area.num}</span>
+                  <h3>{area.title}</h3>
+                  <p>{area.body}</p>
+                  <Link href={link.href} className="program-link">
+                    {link.label}
+                  </Link>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

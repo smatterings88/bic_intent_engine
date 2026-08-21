@@ -6,7 +6,8 @@ import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Contact — Business Impact Canada",
-  description: "Contact Business Impact Canada for program questions and general correspondence.",
+  description:
+    "Contact Business Impact Canada for questions about our free resources and general correspondence.",
   path: "/contact",
 });
 
@@ -18,7 +19,7 @@ export default function ContactPage() {
       <PageHeader
         eyebrow="Contact"
         title="Get in touch."
-        lede="Questions about our programs, resources, or nonprofit mission? We welcome your message and aim to reply within a few business days."
+        lede="Questions about our resources or nonprofit mission? We welcome your message and aim to reply within a few business days."
       />
       <section className="mx-auto grid max-w-4xl gap-12 py-14 page-gutter sm:gap-14 sm:py-16 md:grid-cols-[1fr_320px]">
         <div>

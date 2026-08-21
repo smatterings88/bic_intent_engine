@@ -6,6 +6,8 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       { source: "/app", destination: "/app/login", permanent: false },
+      { source: "/blog", destination: "/articles", permanent: true },
+      { source: "/programs", destination: "/learning-areas", permanent: true },
       { source: "/research", destination: "/articles", permanent: true },
       { source: "/research/:slug", destination: "/articles/:slug", permanent: true },
       { source: "/insights", destination: "/articles", permanent: true },

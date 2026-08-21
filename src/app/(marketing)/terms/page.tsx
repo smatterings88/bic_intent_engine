@@ -23,7 +23,7 @@ export default function TermsPage() {
         <section>
           <h2 className="font-serif text-xl text-foreground mb-3">Use of content</h2>
           <p>
-            Programs, articles, and other materials published by Business Impact Canada are made
+            Articles, guides, and other materials published by Business Impact Canada are made
             available for educational and informational purposes. Excerpts may be quoted with
             appropriate attribution. Reproduction of full publications requires written permission.
           </p>

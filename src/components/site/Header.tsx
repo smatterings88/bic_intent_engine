@@ -9,7 +9,7 @@ import { siteConfig } from "@/lib/site";
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
-  { href: "/programs", label: "Programs" },
+  { href: "/learning-areas", label: "Learning Areas" },
   { href: "/articles", label: "Blog" },
   { href: "/resources", label: "Resources" },
   { href: "/contact", label: "Contact" },
@@ -57,7 +57,7 @@ export function Header() {
     <>
       <div className="site-top-bar">
         Registered Canadian Nonprofit &nbsp;·&nbsp; 15213614 Canada Foundation &nbsp;·&nbsp; All
-        programs free — always
+        resources free — always
       </div>
       <header className="sticky top-0 z-40 border-b border-border bg-white py-4">
         <div className="site-container">

@@ -19,7 +19,7 @@ export function Footer() {
             </div>
             <p>
               Free business education for impact-driven entrepreneurs across Canada. A registered
-              nonprofit foundation. All programs free — always.
+              nonprofit foundation. All resources free — always.
             </p>
             <p className="mt-3 text-[11px] text-white/30">
               15213614 Canada Foundation
@@ -28,12 +28,16 @@ export function Footer() {
             </p>
           </div>
           <div className="site-footer-col">
-            <h4>Programs</h4>
+            <h4>Learning Areas</h4>
             <ul>
-              <FooterLink href="/programs#marketing-mastery">Marketing Mastery</FooterLink>
-              <FooterLink href="/programs#sales-mastery">Sales Mastery</FooterLink>
-              <FooterLink href="/programs#mindset-leadership">Mindset &amp; Leadership</FooterLink>
-              <FooterLink href="/programs#strategy-execution">Strategy &amp; Execution</FooterLink>
+              <FooterLink href="/learning-areas#marketing-mastery">Marketing Mastery</FooterLink>
+              <FooterLink href="/learning-areas#sales-mastery">Sales Mastery</FooterLink>
+              <FooterLink href="/learning-areas#mindset-leadership">
+                Mindset &amp; Leadership
+              </FooterLink>
+              <FooterLink href="/learning-areas#strategy-execution">
+                Strategy &amp; Execution
+              </FooterLink>
             </ul>
           </div>
           <div className="site-footer-col">
@@ -51,7 +55,7 @@ export function Footer() {
         <div className="site-footer-bottom">
           <span>
             © {new Date().getFullYear()} Business Impact Canada · 15213614 Canada Foundation · All
-            programs free
+            resources free
           </span>
           <span>
             <a href="mailto:businessimpactcanada@gmail.com">businessimpactcanada@gmail.com</a>

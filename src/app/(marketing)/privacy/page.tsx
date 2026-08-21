@@ -34,7 +34,7 @@ export default function PrivacyPage() {
           <h2 className="font-serif text-xl text-foreground mb-3">How we use information</h2>
           <p>
             Information you provide is used solely to respond to your inquiry and to support our
-            educational programs. We do not sell, rent, or share personal information with third
+            educational resources. We do not sell, rent, or share personal information with third
             parties for commercial purposes.
           </p>
         </section>

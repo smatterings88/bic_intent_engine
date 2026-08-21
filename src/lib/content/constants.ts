@@ -15,6 +15,7 @@ export const RESERVED_TOP_LEVEL_ROUTES = [
   "about",
   "research",
   "programs",
+  "learning-areas",
   "insights",
   "contact",
   "privacy",
