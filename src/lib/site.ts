@@ -7,7 +7,7 @@ export const siteConfig = {
   legalName: "15213614 Canada Foundation",
   tagline: "Communicate Clearly. Build Something That Matters.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://businessimpactcanada.com",
-  email: "businessimpactcanada@gmail.com",
+  email: "info@businessimpactcanada.com",
   supportEmail: "support@businessimpactcanada.com",
   address: {
     line1: "1771 Robson Street",

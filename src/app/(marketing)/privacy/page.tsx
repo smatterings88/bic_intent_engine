@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { PageHeader } from "@/components/site/PageHeader";
 import { buildPageMetadata } from "@/lib/build-metadata";
+import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Privacy Policy — Business Impact Canada",
@@ -45,10 +46,10 @@ export default function PrivacyPage() {
             handled in accordance with Canada&apos;s Personal Information Protection and Electronic
             Documents Act (PIPEDA). For privacy-related requests or questions, contact{" "}
             <a
-              href="mailto:businessimpactcanada@gmail.com"
+              href={`mailto:${siteConfig.email}`}
               className="text-foreground underline underline-offset-4"
             >
-              businessimpactcanada@gmail.com
+              {siteConfig.email}
             </a>
             .
           </p>
@@ -58,10 +59,10 @@ export default function PrivacyPage() {
           <p>
             Questions regarding this policy may be directed to{" "}
             <a
-              href="mailto:businessimpactcanada@gmail.com"
+              href={`mailto:${siteConfig.email}`}
               className="text-foreground underline underline-offset-4"
             >
-              businessimpactcanada@gmail.com
+              {siteConfig.email}
             </a>
             .
           </p>

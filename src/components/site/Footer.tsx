@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+import { siteConfig } from "@/lib/site";
+
 function FooterLink({ href, children }: { href: string; children: React.ReactNode }) {
   return (
     <li>
@@ -58,7 +60,7 @@ export function Footer() {
             resources free
           </span>
           <span>
-            <a href="mailto:businessimpactcanada@gmail.com">businessimpactcanada@gmail.com</a>
+            <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>
             &nbsp;·&nbsp;
             <Link href="/privacy">Privacy</Link>
             &nbsp;·&nbsp;
